@@ -1,6 +1,0 @@
-version: "0.0.1"
-description: "Single Slave Device Example"
-dependencies:
-  domimartinglogi/dynamic_modbus_master:
-    version: '*'
-    override_path: '../../../'
