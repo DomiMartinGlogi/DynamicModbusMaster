@@ -1,2 +1,5 @@
 /docs/
 /dynamic_modbus_master/cmake-build-debug/
+**/managed_components
+**/cmake-build-debug
+**/build
