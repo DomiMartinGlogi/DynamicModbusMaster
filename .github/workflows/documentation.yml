@@ -35,7 +35,7 @@ jobs:
       - name: Doxygen Action
         uses: mattnotmitt/doxygen-action@1.9.8
         with:
-          doxyfile-path: dmm_dxy
+          doxyfile-path: './dmm_dxy'
         
       - name: Setup Pages
         uses: actions/configure-pages@v5
