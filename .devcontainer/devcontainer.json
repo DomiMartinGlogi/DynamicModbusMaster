@@ -1,0 +1,36 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.183.0/containers/ubuntu
+{
+	"name": "OS-ESP-CTRL",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			"IDF_CLONE_URL": "https://github.com/OEKOSOLVE-FORKS/esp-idf.git",
+			"IDF_CLONE_BRANCH_OR_TAG": "releaseOS/v5.2_modified"
+		}
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"ms-vscode.cpptools",
+		"espressif.esp-idf-extension"
+	],
+
+	// the path of workspace folder to be opened after container is running
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspaces,type=bind",
+	"workspaceFolder": "/workspaces",
+	"mounts": [
+		"source=extensionCache,target=/root/.vscode-server/extensions,type=volume",
+		"source=${localWorkspaceFolderBasename}-build,target=${containerWorkspaceFolder}/build,type=volume"
+	],
+	
+	"settings": {
+		"terminal.integrated.defaultProfile.linux": "bash",
+		"idf.espIdfPath": "/opt/esp/idf",
+		"idf.customExtraPaths": "",
+		"idf.pythonBinPath": "/opt/esp/python_env/idf5.0_py3.8_env/bin/python",
+		"idf.toolsPath": "/opt/esp",
+		"idf.gitPath": "/usr/bin/git"
+	},
+	"runArgs": ["--privileged"]
+}
