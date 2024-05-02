@@ -1,4 +1,4 @@
-menu "Dynamic Modbus Master"
+menu "Dynamic Modbus Master Configuration"
 
     orsource "$IDF_PATH/examples/common_components/env_caps/$IDF_TARGET/Kconfig.env_caps"
 
@@ -35,7 +35,7 @@ menu "Dynamic Modbus Master"
             default 8 if IDF_TARGET_ESP32S2 || IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32C3 ||\
                 IDF_TARGET_ESP32C2 || IDF_TARGET_ESP32H2
             help
-                GPIO number for UART RX pin. See Espressif UART documentation for more information
+                GPIO number for UART RX pin. See Espressifs UART documentation for more information
                 about available pin numbers for UART.
 
         config MB_UART_TXD
@@ -45,7 +45,7 @@ menu "Dynamic Modbus Master"
             default 9 if IDF_TARGET_ESP32S2 || IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32C3 ||\
                 IDF_TARGET_ESP32C2 || IDF_TARGET_ESP32H2
             help
-                GPIO number for UART TX pin. See UART documentation for more information
+                GPIO number for UART TX pin. See Espressifs UART documentation for more information
                 about available pin numbers for UART.
 
         config MB_UART_RTS
@@ -58,7 +58,7 @@ menu "Dynamic Modbus Master"
             help
                 GPIO number for UART RTS pin. This pin is connected to
                 ~RE/DE pin of RS485 transceiver to switch direction.
-                See UART documentation for more information about available pin
+                See Espressifs UART documentation for more information about available pin
                 numbers for UART.
 
         choice MB_COMM_MODE
