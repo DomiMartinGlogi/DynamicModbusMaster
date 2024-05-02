@@ -10,7 +10,6 @@
 4. Modbus Serial must be supported.
 5. Modbus TCP may be supported in the future.
 6. Performance with many devices must be acceptable.
-7. 
 
 ## Modbus Slave Devices
 
@@ -19,3 +18,10 @@
 3. Users should be able to easily manage a variable amount of devices
 4. Users should be able to easily create their own device types
 5. Data being sent and received should be type safe -> Only Modbus Compatible Types
+
+## Open Questions
+
+1. Is the call to `mbc_master_send_request` truly blocking?
+2. What is performance like with 2+ devices?
+3. Modbus TCP integration?
+4. Custom type support for Modbus Slaves?
