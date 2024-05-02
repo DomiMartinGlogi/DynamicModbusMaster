@@ -7,8 +7,12 @@
    - It is even more unlikely that the buses pin definitions might change
 2. Users should be able to initialise and start the Modbus with minimal effort
 3. Users should be able to stop and deinitalise the Modbus
+4. Modbus Serial must be supported.
+5. Modbus TCP may be supported in the future.
+6. Performance with many devices must be acceptable.
+7. 
 
-## Modbus Slave Device
+## Modbus Slave Devices
 
 1. Users should be able to create and delete devices on the fly
 2. Users should be able to safely send and receive data from a device
