@@ -3,11 +3,7 @@
 {
 	"name": "Dynamic Modbus Master",
 	"build": {
-		"dockerfile": "Dockerfile",
-		"args": {
-			"IDF_CLONE_URL": "https://github.com/OEKOSOLVE-FORKS/esp-idf.git",
-			"IDF_CLONE_BRANCH_OR_TAG": "releaseOS/v5.2_modified"
-		}
+		"dockerfile": "Dockerfile"
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
