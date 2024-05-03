@@ -1,0 +1,21 @@
+name: Push component to the Component Registry
+on:
+  push:
+    tags: 
+    - v*
+
+jobs:
+  upload-component:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: "recursive"
+      - name: Upload Component
+        uses: espressif/upload-components-ci-action@v1
+        with:
+          name: "dynamic_modbus_master"
+          version: ${{ github.ref_name }}
+          namespace: domimartinglogi
+          api_token: ${{ secrets.COMPONENT_REGISTRY_TOKEN }}
+          
