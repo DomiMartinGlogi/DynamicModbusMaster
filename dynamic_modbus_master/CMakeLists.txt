@@ -2,7 +2,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.22)
 
 idf_component_register(
         SRCS
-        "dynamic_modbus_master.cpp"
+        "ModbusErrorHelper.cpp"
         INCLUDE_DIRS
         "include"
 )
