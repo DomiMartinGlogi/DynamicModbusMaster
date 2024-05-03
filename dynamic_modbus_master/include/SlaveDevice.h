@@ -27,9 +27,22 @@
 namespace dynamic_modbus_master::slave {
 class SlaveDevice{
 public:
+    /**
+     * @brief Initializes the SlaveDevice.
+     *
+     * @details This function initializes the SlaveDevice by performing any necessary setup and configuration.
+     * It should be called before any other operations on the SlaveDevice.
+     *
+     * @return A ModbusError object indicating the status of the initialization.
+     */
     virtual ModbusError init() final;
     
 protected:
+    /**
+     * @brief A class representing a slave device in a Modbus network.
+     *
+     * @details This class provides functionality to initialize and communicate with a slave device using the Modbus protocol.
+     */
     SlaveDevice(uint8_t address, uint8_t retries);
     
     /**
