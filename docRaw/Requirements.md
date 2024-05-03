@@ -1,9 +1,9 @@
-# Dynamic Modbus Master Requirements
+# Dynamic Modbus Master Requirements {#dmm_req}
 
 ## Modbus Master
 
 1. Users should be able to configure Modbus within the menuconfig
-   - It is unlikely that a user should wish to change the buses definition regarding baud rate or UART-Port
+   - It is unlikely that a user should wish to change the buses definition regarding UART-Port
    - It is even more unlikely that the buses pin definitions might change
 2. Users should be able to initialise and start the Modbus with minimal effort
 3. Users should be able to stop and deinitalise the Modbus

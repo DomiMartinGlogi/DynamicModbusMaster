@@ -7,6 +7,9 @@
     <contentRoot DIR="$PROJECT_DIR$" />
   </component>
   <component name="CidrRootsConfiguration">
+    <libraryRoots>
+      <file path="/opt/esp/idf" />
+    </libraryRoots>
     <excludeRoots>
       <file path="$PROJECT_DIR$/dynamic_modbus_master/cmake-build-debug" />
     </excludeRoots>
