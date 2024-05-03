@@ -39,6 +39,8 @@
     <tab type="usergroup" visible="yes" title="Planning">
       <tab type="user" visible="yes" title="Requirements" url="@ref dmm_req" />
       <tab type="user" visible="yes" title="Minimum Viable Product" url="@ref dmm_mvp" />
+      <tab type="user" visible="yes" title="Functional Units" url="@ref dmm_funcUnits" />
+      <tab type="user" visible="yes" title="Class Diagram" url="@ref dmm_class_diag" />
     </tab>
   </navindex>
 
