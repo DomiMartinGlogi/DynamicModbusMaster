@@ -2,9 +2,8 @@
 
 ## Modbus Master
 
-1. Users should be able to configure Modbus within the menuconfig
-   - It is unlikely that a user should wish to change the buses definition regarding UART-Port
-   - It is even more unlikely that the buses pin definitions might change
+1. Users should be able to configure Modbus easily -> Setting only Pins, UART-Port, Baud-Rate
+   - It is unlikely that a user might wish to adjust these settings on the fly, however, they could wish to support various setups programmatically rather than at compile time.
 2. Users should be able to initialise and start the Modbus with minimal effort
 3. Users should be able to stop and deinitalise the Modbus
 4. Modbus Serial must be supported.
