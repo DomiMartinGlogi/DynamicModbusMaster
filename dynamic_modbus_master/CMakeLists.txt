@@ -4,6 +4,7 @@ idf_component_register(
         SRCS
         "ModbusErrorHelper.cpp"
         "DynamicModbusMaster.cpp"
+        "SlaveDevice.cpp"
         INCLUDE_DIRS
         "include"
 )
