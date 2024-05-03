@@ -3,4 +3,5 @@ url: "https://github.com/DomiMartinGlogi/DynamicModbusMaster"
 license: "MIT"
 
 dependencies:
+  idf: ">=5.0"
   espressif/esp-modbus: "*"

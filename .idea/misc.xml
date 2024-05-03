@@ -3,7 +3,15 @@
   <component name="CMakePythonSetting">
     <option name="pythonIntegrationState" value="YES" />
   </component>
-  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$/dynamic_modbus_master">
+  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$/dynamic_modbus_master/examples/SingleSlaveDevice">
     <contentRoot DIR="$PROJECT_DIR$" />
+  </component>
+  <component name="CidrRootsConfiguration">
+    <libraryRoots>
+      <file path="/opt/esp/idf" />
+    </libraryRoots>
+    <excludeRoots>
+      <file path="$PROJECT_DIR$/dynamic_modbus_master/cmake-build-debug" />
+    </excludeRoots>
   </component>
 </project>

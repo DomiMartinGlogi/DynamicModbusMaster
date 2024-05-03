@@ -1,25 +1,10 @@
 # This image contains customizations required for modbus
 FROM espressif/idf:release-v5.1
 
-ARG IDF_CLONE_URL
-ARG IDF_CLONE_BRANCH_OR_TAG
 
 # avoids user input during docker build
 # https://stackoverflow.com/q/61388002
 ARG DEBIAN_FRONTEND=noninteractive
-
-# remove pre-installed ESP-IDF
-RUN rm -rf /opt/esp/idf
-
-# clone your desired ESP-IDF version
-RUN git clone --recursive ${IDF_CLONE_URL} /opt/esp/idf
-
-# checkout defined branch
-WORKDIR /opt/esp/idf
-RUN git checkout ${IDF_CLONE_BRANCH_OR_TAG}
-
-# install and setup the ESP-IDF as per its instructions
-RUN ./install.sh
 
 # USBIP
 RUN apt-get update \
