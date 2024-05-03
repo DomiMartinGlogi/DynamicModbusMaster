@@ -22,6 +22,7 @@
 #define DYNAMIC_MODBUS_MASTER_MODBUSDATA_HPP
 
 #include <cinttypes>
+#include "ModbusError.h"
 
 namespace dynamic_modbus_master {
 /**
@@ -32,5 +33,24 @@ namespace dynamic_modbus_master {
  */
 template<typename T>
 concept ModbusData = (sizeof(T) % sizeof(uint16_t) == 0) && (sizeof(T) > 0);
+
+namespace slave {
+
+/**
+ * @brief Represents the return value from a Modbus slave device.
+ *
+ * @details Template Struct containing the return value of a slave device, unless error is set as ModbusError::OK, data
+ * will not be reliable.
+ *
+ * @tparam T The type of data returned by the slave device. Constrained to be ModbusData
+ * @param error ModbusError representing the return value of the request
+ * @param data Returned Data as type T
+ */
+template<ModbusData T>
+struct SlaveReturn {
+    ModbusError error;
+    T data;
+};
+}
 }
 #endif //DYNAMIC_MODBUS_MASTER_MODBUSDATA_HPP
