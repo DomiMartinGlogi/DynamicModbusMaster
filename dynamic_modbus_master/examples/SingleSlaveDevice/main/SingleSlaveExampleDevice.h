@@ -18,8 +18,26 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 
-#include "ModbusErrorHelper.h"
+#ifndef DYNAMIC_MODBUS_MASTER_SINGLESLAVEEXAMPLEDEVICE_H
+#define DYNAMIC_MODBUS_MASTER_SINGLESLAVEEXAMPLEDEVICE_H
 
-namespace dynamic_modbus_master {
+#include <SlaveDevice.h>
 
-} // dynamic_modbus_master
+class SingleSlaveExampleDevice : public dynamic_modbus_master::slave::SlaveDevice{
+public:
+    SingleSlaveExampleDevice(uint8_t address, uint8_t retries);
+    
+    uint16_t readExampleSingleRegister();
+    
+    uint32_t readExampleMultipleRegisters();
+    
+    float readExampleFloat();
+    
+    void writeExampleSingleRegister(uint16_t data);
+    
+    void writeExampleMultipleRegisters(uint32_t data);
+    
+    void writeExampleFloat(float data);
+};
+
+#endif //DYNAMIC_MODBUS_MASTER_SINGLESLAVEEXAMPLEDEVICE_H

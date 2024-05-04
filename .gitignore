@@ -3,3 +3,6 @@
 **/managed_components
 **/cmake-build-debug
 **/build
+**/sdkconfig
+**/sdkconfig.old
+**/dependencies.lock

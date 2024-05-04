@@ -66,12 +66,6 @@ ModbusError DynamicModbusMaster::initialise(ModbusConfig config) {
         return ModbusError::FAILURE_OR_EXCEPTION;
     }
     
-    error = uart_set_mode(m_config.uartPort, UART_MODE_RS485_HALF_DUPLEX);
-    if (error != ESP_OK) {
-        ESP_LOGE(TAG, "An error occured while setting the UART mode %s", esp_err_to_name(error));
-        return ModbusError::INVALID_ARG;
-    }
-    
     return ModbusError::OK;
 }
 
@@ -81,6 +75,13 @@ ModbusError DynamicModbusMaster::start() {
         ESP_LOGE(TAG, "An error occurred while starting the Modbus communication stack: %s", esp_err_to_name(error));
         return ModbusError::INVALID_ARG;
     }
+    
+    error = uart_set_mode(m_config.uartPort, UART_MODE_RS485_HALF_DUPLEX);
+    if (error != ESP_OK) {
+        ESP_LOGE(TAG, "An error occured while setting the UART mode %s", esp_err_to_name(error));
+        return ModbusError::INVALID_ARG;
+    }
+    
     return ModbusError::OK;
 }
 

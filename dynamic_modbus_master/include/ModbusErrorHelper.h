@@ -27,16 +27,48 @@
 namespace dynamic_modbus_master{
 
 class ModbusErrorHelper {
-    /**
-     * @brief Converts a ModbusError enum value to its corresponding name.
-     * @param error The ModbusError enum value.
-     * @return The name of the ModbusError.
-     *
-     * @details This function takes a ModbusError enum value and returns its corresponding
-     * name as a string. The ModbusError enum represents different error types
-     * that can occur in Modbus communication.
-     */
-    [[maybe_unused]] constexpr static std::string modbusErrorToName(const ModbusError error);
+public:
+/**
+ * @brief Converts a ModbusError enum value to its corresponding name.
+ * @param error The ModbusError enum value.
+ * @return The name of the ModbusError.
+ *
+ * @details This function takes a ModbusError enum value and returns its corresponding
+ * name as a string. The ModbusError enum represents different error types
+ * that can occur in Modbus communication.
+ */
+[[maybe_unused]] constexpr static std::string modbusErrorToName(const ModbusError error) {
+        switch (error) {
+            case ModbusError::OK:
+                return "OK";
+                break;
+            case ModbusError::INVALID_ARG:
+                return "INVALID_ARG";
+                break;
+            case ModbusError::INVALID_RESPONSE:
+                return "INVALID_RESPONSE";
+                break;
+            case ModbusError::ADDRESS_UNAVAILABLE:
+                return "ADDRESS_UNAVAILABLE";
+                break;
+            case ModbusError::SLAVE_NOT_SUPPORTED:
+                return "SLAVE_NOT_SUPPORTED";
+                break;
+            case ModbusError::PORT_NOT_SUPPORTED:
+                return "PORT_NOT_SUPPORTED";
+                break;
+            case ModbusError::INVALID_STATE:
+                return "INVALID_STATE";
+                break;
+            case ModbusError::TIMEOUT:
+                return "TIMEOUT";
+                break;
+            case ModbusError::FAILURE_OR_EXCEPTION:
+                return "FAILURE_OR_EXCEPTION";
+                break;
+        }
+        return "Invalid Error";
+    }
 };
 
 } // dynamic_modbus_master
