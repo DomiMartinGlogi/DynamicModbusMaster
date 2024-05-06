@@ -1,4 +1,4 @@
-# Single Slave Device Example 
+# Single Slave Device Example {#dmm_exm_ssdI}
 
 Example to demonstrate usage of this library to create and manage a single device in a serial environment.
 This example can be configured via `idf.py menuconfig`, additional information can be found below.

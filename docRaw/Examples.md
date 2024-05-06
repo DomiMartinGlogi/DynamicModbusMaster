@@ -1,3 +1,3 @@
 # Examples {#dmm_exm}
 
-1. [Single Slave Device]("../dynamic_modbus_master/examples/SingleSlaveDevice/SingleSlaveDevice.md") 
+1. [Single Slave Device](@ref dmm_exm_ssdI) 
