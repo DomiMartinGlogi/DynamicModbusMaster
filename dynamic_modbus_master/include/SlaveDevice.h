@@ -112,7 +112,7 @@ private:
      * <li> ModbusError::TIMEOUT - Indicating a timeout occurred.
      * <li> ModbusError::INVALID_ARG - Indicating an Argument was invalid.
      * <li> ModbusError::INVALID_RESPONSE - Indicating that the receiving device returned an invalid response.
-     * <li> ModbusError::SLAVE_NO_SUPPORTED - Indicating that the receiving device doesn't support the command specified in the request.
+     * <li> ModbusError::SLAVE_NOT_SUPPORTED - Indicating that the receiving device doesn't support the command specified in the request.
      * <li> ModbusError::FAILURE_OR_EXCEPTION - Indicating that a generic failure or exception occurred.
      * </ul>
      */

@@ -74,7 +74,7 @@ class MyDevice {
 
 To access a register, the implemented `MyDevice` can simply call the appropriate method (see `dynamic_modbus_master::slave::SlaveDevice`).
 
-For further info see [here](@ref )
+For further info see [here](@ref dmm_slaves)
 
 ## Stopping
 

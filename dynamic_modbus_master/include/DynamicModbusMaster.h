@@ -42,7 +42,7 @@ public:
      * @param config The configuration of the Modbus connection.
      * @return An instance of ModbusError representing the result of the initialization.<br>
      * Possible Results:
-     * <ul> 
+     * <ul>
      * <li> ModbusError::OK - Initalisation was successful
      * <li> ModbusError::PORT_NOT_SUPPORTED - The MB Port Type was not supported
      * <li> ModbusError::INVALID_STATE - Inialisation failure

@@ -11,6 +11,7 @@
     </tab>
     <tab type="usergroup" visible="yes" title="Usage">
       <tab type="user" visible="yes" title="Getting Started" url="@ref dmm_getStart"/>
+      <tab type="user" visible="yes" title="Slave Devices" url="@ref dmm_slaves" />
     </tab>
     <tab type="user" visible="yes" title="Examples" url="@ref dmm_exm" />
     <tab type="usergroup" visible="yes" title="Further Documentation">
