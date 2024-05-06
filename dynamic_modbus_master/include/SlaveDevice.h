@@ -23,21 +23,11 @@
 #include "ModbusData.hpp"
 #include <ModbusError.h>
 #include <esp_modbus_master.h>
+#include <SlaveDeviceIfc.h>
 
 namespace dynamic_modbus_master::slave {
-class SlaveDevice{
+class SlaveDevice: public SlaveDeviceIfc<SlaveDevice>{
 public:
-    /**
-     * @brief Initializes the SlaveDevice.
-     *
-     * @details This function initializes the SlaveDevice by performing any necessary setup and configuration.
-     * It should be called before any other operations on the SlaveDevice.
-     *
-     * @return A ModbusError object indicating the status of the initialization.
-     */
-    virtual ModbusError init() final;
-    
-protected:
     /**
      * @brief A class representing a slave device in a Modbus network.
      *
@@ -45,11 +35,18 @@ protected:
      */
     SlaveDevice(uint8_t address, uint8_t retries);
     
+    ~SlaveDevice() override = default;
+    
     /**
      * @brief Writes data to the holding registers of a Modbus slave device.
      *
      * @details This function sends a Modbus request to write data to the holding registers of a specified register address in a slave device.
      * The function takes the register address and the data to write as parameters and returns a `ModbusError` object indicating the status of the write request.
+     *
+     * This method determines what Modbus Function to use at compile time, based on the type of the Data provided.
+     * If Type T can be represented in a single Holding register, it will use Function Code 0x06, if it can be represented
+     * in a Natural Number of Holding Registers larger than 1 it will use Function Code 0x10. If it cannot be represented
+     * in a Natural Number of Holding Registers compilation will fail. See dynamic_modbus_master::ModbusData
      *
      * @tparam T The type of data to be written to the holding registers. This type must meet the `ModbusData` concept requirements.
      * @param reg The register address to start writing to.

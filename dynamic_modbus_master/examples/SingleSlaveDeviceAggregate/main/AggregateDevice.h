@@ -18,39 +18,29 @@
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
 
-#include "SlaveDevice.h"
+#ifndef DYNAMIC_MODBUS_MASTER_AGGREGATEDEVICE_H
+#define DYNAMIC_MODBUS_MASTER_AGGREGATEDEVICE_H
 
-namespace dynamic_modbus_master::slave {
+#include <SlaveDevice.h>
 
-ModbusError SlaveDevice::sendRequest(mb_param_request_t request, void *data) const{
-    uint8_t attempts = 0;
-    esp_err_t error;
-    do {
-        attempts++;
-        error = mbc_master_send_request(&request, data);
-        if (error != ESP_ERR_TIMEOUT) {
-            break;
-        }
-    } while(attempts <= retries);
-    if (attempts > retries) {
-        return ModbusError::TIMEOUT;
-    } else {
-        switch (error) {
-            case ESP_OK:
-                return ModbusError::OK;
-            case ESP_ERR_INVALID_ARG:
-                return ModbusError::INVALID_ARG;
-            case ESP_ERR_INVALID_RESPONSE:
-                return ModbusError::INVALID_RESPONSE;
-            case ESP_ERR_NOT_SUPPORTED:
-                return ModbusError::SLAVE_NOT_SUPPORTED;
-            default:
-                return ModbusError::FAILURE_OR_EXCEPTION;
-        }
-    }
-}
+class AggregateDevice{
+public:
+    AggregateDevice(uint8_t address, uint8_t retries);
+    
+    uint16_t readExampleSingleRegister();
+    
+    uint32_t readExampleMultipleRegisters();
+    
+    float readExampleFloat();
+    
+    void writeExampleSingleRegister(uint16_t data);
+    
+    void writeExampleMultipleRegisters(uint32_t data);
+    
+    void writeExampleFloat(float data);
+private:
+    dynamic_modbus_master::slave::SlaveDevice m_device;
+};
 
-SlaveDevice::SlaveDevice(uint8_t address, uint8_t retries): address(address), retries(retries) {
-}
 
-}
+#endif //DYNAMIC_MODBUS_MASTER_AGGREGATEDEVICE_H
