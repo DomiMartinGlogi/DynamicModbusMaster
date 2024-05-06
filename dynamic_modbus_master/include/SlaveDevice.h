@@ -35,6 +35,8 @@ public:
      */
     SlaveDevice(uint8_t address, uint8_t retries);
     
+    ~SlaveDevice() override = default;
+    
     /**
      * @brief Writes data to the holding registers of a Modbus slave device.
      *

@@ -41,6 +41,7 @@ namespace dynamic_modbus_master::slave {
  */
 template<class T>
 class SlaveDeviceIfc {
+public:
     virtual ~SlaveDeviceIfc() = default;
     
     /**
