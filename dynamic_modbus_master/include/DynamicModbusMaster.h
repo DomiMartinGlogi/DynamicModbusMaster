@@ -40,8 +40,9 @@ public:
      * parameters for the Modbus connection.
      *
      * @param config The configuration of the Modbus connection.
-     * @return An instance of ModbusError representing the result of the initialization.
-     * <ul> Possible Results:
+     * @return An instance of ModbusError representing the result of the initialization.<br>
+     * Possible Results:
+     * <ul> 
      * <li> ModbusError::OK - Initalisation was successful
      * <li> ModbusError::PORT_NOT_SUPPORTED - The MB Port Type was not supported
      * <li> ModbusError::INVALID_STATE - Inialisation failure
@@ -60,8 +61,9 @@ public:
      * `ModbusError::INVALID_ARG` to indicate an invalid argument error. If the start process is successful, the
      * function returns `ModbusError::OK`.
      *
-     * @return An instance of ModbusError representing the result of the start process.
-     * <ul> Possible Results:
+     * @return An instance of ModbusError representing the result of the start process.<br>
+     * Possible Results:
+     * <ul>
      * <li> ModbusError::OK - Start process was successful
      * <li> ModbusError::INVALID_ARG - Invalid argument error
      * </ul>
@@ -77,8 +79,9 @@ public:
      * `ModbusError::INVALID_STATE` to indicate an invalid state error. If the stop process is successful, the
      * function returns `ModbusError::OK`.
      *
-     * @return An instance of ModbusError representing the result of the stop process.
-     * <ul> Possible Results:
+     * @return An instance of ModbusError representing the result of the stop process. <br>
+     * Possible Results:
+     * <ul>
      * <li> ModbusError::OK - Stop process was successful
      * <li> ModbusError::INVALID_STATE - Invalid state error, likely indicating that the Modbus was never started
      * </ul>

@@ -105,8 +105,9 @@ private:
      * @param request Struct containing the request
      * @param data void* pointing at the target data, in case of reading requests, the data will be written to here,
      * in case of writing requests, the data will be read from here.
-     * @return ModbusError containing either the error.
-     * <ul> Possible Error Codes:
+     * @return ModbusError containing either the error. <br>
+     * Possible Error Codes:
+     * <ul>
      * <li> ModbusError::OK - Indicating the request was successful.
      * <li> ModbusError::TIMEOUT - Indicating a timeout occurred.
      * <li> ModbusError::INVALID_ARG - Indicating an Argument was invalid.
