@@ -30,7 +30,7 @@ error = master.start();
 Errors that occur can be checked in a similar manner to the way the esp-idf can:
 
 ```c++
-if (error != ModbusError::OK) {
+if (error != dynamic_modbus_master::ModbusError::OK) {
     // Handle the error
 }
 ```

@@ -29,9 +29,9 @@ namespace dynamic_modbus_master {
  * @brief Concept to check if a given Type T can be represented in modbus registers, constrains T to be
  * at least 16-Bits or the size of a single modbus Register.
  *
- *  * @f{eqnarray*}{
+ * @f{eqnarray*}{
  * sizeof(T) \geq sizeof(\text{Modbus Register})
- *
+ * @f}
  * @tparam T The type to check.
  */
 template<typename T>
