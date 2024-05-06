@@ -9,6 +9,9 @@
       <tab type="user" visible="yes" title="Functional Units" url="@ref dmm_funcUnits" />
       <tab type="user" visible="yes" title="Class Diagram" url="@ref dmm_class_diag" />
     </tab>
+    <tab type="usergroup" visible="yes" title="Usage">
+      <tab type="user" visible="yes" title="Getting Started" url="@ref dmm_getStart"/>
+    </tab>
     <tab type="user" visible="yes" title="Examples" url="@ref dmm_exm" />
     <tab type="usergroup" visible="yes" title="Further Documentation">
       <tab type="pages" visible="no" title="" intro=""/>
