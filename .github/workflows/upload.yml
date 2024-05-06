@@ -18,4 +18,5 @@ jobs:
           version: ${{ github.ref_name }}
           namespace: domimartinglogi
           api_token: ${{ secrets.COMPONENT_REGISTRY_TOKEN }}
+          directories: "dynamic_modbus_master"
           
