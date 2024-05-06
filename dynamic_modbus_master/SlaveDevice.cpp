@@ -31,11 +31,13 @@ ModbusError SlaveDevice::sendRequest(mb_param_request_t request, void *data) con
         if (error != ESP_ERR_TIMEOUT) {
             break;
         }
-    } while(attempts < retries);
-    if (attempts >= retries) {
+    } while(attempts <= retries);
+    if (attempts > retries) {
         return ModbusError::TIMEOUT;
-    } else if(error != ESP_OK) {
+    } else {
         switch (error) {
+            case ESP_OK:
+                return ModbusError::OK;
             case ESP_ERR_INVALID_ARG:
                 return ModbusError::INVALID_ARG;
             case ESP_ERR_INVALID_RESPONSE:
@@ -46,7 +48,6 @@ ModbusError SlaveDevice::sendRequest(mb_param_request_t request, void *data) con
                 return ModbusError::FAILURE_OR_EXCEPTION;
         }
     }
-    return ModbusError::OK;
 }
 
 SlaveDevice::SlaveDevice(uint8_t address, uint8_t retries): address(address), retries(retries) {

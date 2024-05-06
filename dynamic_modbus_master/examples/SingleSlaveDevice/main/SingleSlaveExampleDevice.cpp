@@ -19,6 +19,7 @@
 //SOFTWARE.
 
 #include "SingleSlaveExampleDevice.h"
+#include <ModbusErrorHelper.h>
 
 SingleSlaveExampleDevice::SingleSlaveExampleDevice(uint8_t address, uint8_t retries) : SlaveDevice(address, retries){
 
@@ -52,13 +53,22 @@ float SingleSlaveExampleDevice::readExampleFloat() {
 }
 
 void SingleSlaveExampleDevice::writeExampleSingleRegister(uint16_t data) {
-    writeHolding(1, data);
+    dynamic_modbus_master::ModbusError error = writeHolding(1, data);
+    if (error != dynamic_modbus_master::ModbusError::OK) {
+        ESP_LOGE("SingleSlaveExampleDevice", "Failed to write Data %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(error).c_str());
+    }
 }
 
 void SingleSlaveExampleDevice::writeExampleMultipleRegisters(uint32_t data) {
-    writeHolding(2, data);
+    dynamic_modbus_master::ModbusError error = writeHolding(2, data);
+    if (error != dynamic_modbus_master::ModbusError::OK) {
+        ESP_LOGE("SingleSlaveExampleDevice", "Failed to write Data %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(error).c_str());
+    }
 }
 
 void SingleSlaveExampleDevice::writeExampleFloat(float data) {
-    writeHolding(4, data);
+    dynamic_modbus_master::ModbusError error = writeHolding(4, data);
+    if (error != dynamic_modbus_master::ModbusError::OK) {
+        ESP_LOGE("SingleSlaveExampleDevice", "Failed to write Data %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(error).c_str());
+    }
 }

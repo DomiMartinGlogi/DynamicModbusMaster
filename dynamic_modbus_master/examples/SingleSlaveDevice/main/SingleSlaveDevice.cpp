@@ -28,7 +28,7 @@
 dynamic_modbus_master::DynamicModbusMaster master;
 
 dynamic_modbus_master::ModbusConfig config {
-    .uartPort = CONFIG_MB_UART_PORT_NUM,
+    .uartPort = static_cast<uart_port_t>(CONFIG_MB_UART_PORT_NUM),
     .rxdPin = CONFIG_MB_UART_RXD,
     .txdPin = CONFIG_MB_UART_TXD,
     .rtsPin = CONFIG_MB_UART_RTS,
