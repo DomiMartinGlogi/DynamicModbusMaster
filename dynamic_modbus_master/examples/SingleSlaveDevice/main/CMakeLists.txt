@@ -1,2 +1,5 @@
-idf_component_register(SRCS "SingleSlaveDevice.c"
-                    INCLUDE_DIRS ".")
+idf_component_register(
+        SRCS
+        "SingleSlaveDevice.cpp"
+        "SingleSlaveExampleDevice.cpp"
+        INCLUDE_DIRS ".")

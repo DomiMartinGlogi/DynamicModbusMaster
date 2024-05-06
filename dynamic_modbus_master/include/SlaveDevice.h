@@ -57,7 +57,7 @@ protected:
      * @return A `ModbusError` object indicating the status of the write request.
      */
     template<ModbusData T>
-    ModbusError writeHolding(uint16_t reg, const T& data) const {
+    ModbusError writeHolding(uint16_t reg, T data) const {
         mb_param_request_t request {
                 .slave_addr = address,
             .command = 0x06,
@@ -65,7 +65,7 @@ protected:
             .reg_size = sizeof(T) / sizeof(uint16_t)
         };
         if (request.reg_size > 1) {
-            request.command = 0x16;
+            request.command = 0x10;
         }
         return sendRequest(request, &data);
     }

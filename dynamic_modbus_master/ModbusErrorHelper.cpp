@@ -21,35 +21,5 @@
 #include "ModbusErrorHelper.h"
 
 namespace dynamic_modbus_master {
-[[maybe_unused]] constexpr std::string ModbusErrorHelper::modbusErrorToName(ModbusError error) {
-    switch (error) {
-        case ModbusError::OK:
-            return "OK";
-            break;
-        case ModbusError::INVALID_ARG:
-            return "INVALID_ARG";
-            break;
-        case ModbusError::INVALID_RESPONSE:
-            return "INVALID_RESPONSE";
-            break;
-        case ModbusError::ADDRESS_UNAVAILABLE:
-            return "ADDRESS_UNAVAILABLE";
-            break;
-        case ModbusError::SLAVE_NOT_SUPPORTED:
-            return "SLAVE_NOT_SUPPORTED";
-            break;
-        case ModbusError::PORT_NOT_SUPPORTED:
-            return "PORT_NOT_SUPPORTED";
-            break;
-        case ModbusError::INVALID_STATE:
-            return "INVALID_STATE";
-            break;
-        case ModbusError::TIMEOUT:
-            return "TIMEOUT";
-            break;
-        case ModbusError::FAILURE_OR_EXCEPTION:
-            return "FAILURE_OR_EXCEPTION";
-            break;
-    }
-}
+
 } // dynamic_modbus_master
