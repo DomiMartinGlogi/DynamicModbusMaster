@@ -107,12 +107,12 @@ private:
      * in case of writing requests, the data will be read from here.
      * @return ModbusError containing either the error.
      * <ul> Possible Error Codes:
-     * <li> ModbusError::OK - Indicating the request was successful. </li>
-     * <li> ModbusError::TIMEOUT - Indicating a timeout occurred. </li>
-     * <li> ModbusError::INVALID_ARG - Indicating an Argument was invalid </li>
-     * <li> ModbusError::INVALID_RESPONSE - Indicating that the receiving device returned an invalid response. </li>
-     * <li> ModbusError::SLAVE_NO_SUPPORTED - Indicating that the receiving device doesn't support the command specified in the request. </li>
-     * <li> ModbusError::FAILURE_OR_EXCEPTION - Indicating that a generic failure or exception occurred. </li>
+     * <li> ModbusError::OK - Indicating the request was successful.
+     * <li> ModbusError::TIMEOUT - Indicating a timeout occurred.
+     * <li> ModbusError::INVALID_ARG - Indicating an Argument was invalid.
+     * <li> ModbusError::INVALID_RESPONSE - Indicating that the receiving device returned an invalid response.
+     * <li> ModbusError::SLAVE_NO_SUPPORTED - Indicating that the receiving device doesn't support the command specified in the request.
+     * <li> ModbusError::FAILURE_OR_EXCEPTION - Indicating that a generic failure or exception occurred.
      * </ul>
      */
     ModbusError sendRequest(mb_param_request_t request, void* data) const;
