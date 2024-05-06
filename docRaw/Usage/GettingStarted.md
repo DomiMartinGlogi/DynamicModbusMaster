@@ -37,6 +37,48 @@ if (error != dynamic_modbus_master::ModbusError::OK) {
 
 ## Setting Up the First Device Type
 
+When implementing a new device type there is a semantic difference to make:
+- If the device ***is*** a modbus slave device, ie it acting is a modbus slave is integral to its function, 
+  then using the inheritance-based approach may be appropriate.
+- If the device ***has*** a modbus interface, ie its function is not dependent on acting as a modbus slave,
+  so the aggregational approach is preferable.
+
 ### Inheritance
 
+When the inheritance-based approach is chosen the device should inherit from `dynamic_modbus_master::slave::SlaveDevice`:
+
+```c++
+class MyDevice: public dynamic_modbus_master::slave::SlaveDevice {
+    public:
+    MyDevice(uint16_t address, uint8_t retries);
+    virtual ~MyDevice() = default;
+};
+```
+
 ### Aggregation
+
+If the aggregational approach is chosen then the device should own an instance of `dynamic_modbus_master::slave::SlaveDevice`:
+
+```c++
+class MyDevice {
+    public:
+    MyDevice(uint16_t address, uint8_t retries);
+    virtual ~MyDevice() = default;
+    
+    private:
+    dynamic_modbus_master::slave::SlaveDevice m_device;
+};
+```
+
+### Accessing Registers
+
+To access a register, the implemented `MyDevice` can simply call the appropriate method (see `dynamic_modbus_master::slave::SlaveDevice`).
+
+For further info see [here](@ref )
+
+## Stopping
+
+To stop and deinitialise the modbus, simply call the `stop` Method on the `dynamic_modbus_master::DynamicModbusMaster` object.
+
+@warning This is not just stopping the bus, but also removing it from memory and will prevent any further usages of the bus until the bus is reinitialised.
+
