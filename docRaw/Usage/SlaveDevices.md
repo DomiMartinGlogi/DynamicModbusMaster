@@ -127,4 +127,10 @@ to read the registers only when they are needed.
 
 ## Advanced Uses
 
-@todo Document Advanced Uses
+For certain use cases the above API might not be sufficient, it is however possible to achieve similar functionality
+by implementing the dynamic_modbus_master::slave::SlaveDeviceIfc Interface. As long as this interface is
+implemented into a custom class, usage of Slave Devices should be the same from an application perspective.
+
+For an example on how to implement this interface see dynamic_modbus_master::slave::SlaveDevice.
+
+@warning esp-modbus currently does not support user-defined functions without some major adjustments, if your code requires a user defined function, see [here](https://github.com/espressif/esp-modbus/issues/34)
