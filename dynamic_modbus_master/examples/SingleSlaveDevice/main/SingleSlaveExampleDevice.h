@@ -38,6 +38,14 @@ public:
     void writeExampleMultipleRegisters(uint32_t data);
     
     void writeExampleFloat(float data);
+    
+    bool readExampleSingleCoil();
+    
+    void writeExampleSingleCoil(bool state);
+    
+    uint16_t readExampleMultipleCoils();
+    
+    void writeExampleMultipleCoils(uint16_t coilStates);
 };
 
 #endif //DYNAMIC_MODBUS_MASTER_SINGLESLAVEEXAMPLEDEVICE_H
