@@ -13,7 +13,7 @@ To learn how to use this library see the [Getting Started](@ref dmm_getStart) se
 |-----------------------------------------|---------|------------------|
 | Handling Modbus Serial Setup/Start/Stop | Done    | `v0.0.1`         |
 | Modbus RTU                              | ^       | ^                |
-| Modbus Ascii                            | Planned |                  |
+| Modbus Ascii                            | Planned | `v0.2.0`         |
 | Modbus TCP                              | Planned |                  |
 | Handling Read/Write Holding Registers   | Done    | `v0.0.1`         |
 | Handling Read/Write Coil Registers      | Done    | `v0.2.0`         |
