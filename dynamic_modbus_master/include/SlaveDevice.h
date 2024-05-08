@@ -96,7 +96,7 @@ public:
                 .reg_size = sizeof(T) / sizeof(uint16_t)
         };
         
-        T data;
+        T data = 0;
         ModbusError error = sendRequest(request, &data);
         
         return SlaveReturn{error, data};
@@ -169,7 +169,7 @@ public:
             .reg_size = coilNum
         };
         if (std::is_same_v<T, bool> && coilNum == 1) {
-            uint8_t data;
+            uint8_t data = 0;
             ModbusError error = sendRequest(request, &data);
             return {error, (data != 0)};
         } else if (!(std::is_same_v<T, bool> && coilNum > 1)) {
@@ -200,7 +200,7 @@ public:
             .reg_size = (std::is_same_v<bool, T>? 1 : sizeof(T) / 2)
         };
         
-        T data;
+        T data = 0;
         ModbusError error;
         error = sendRequest(request, &data);
         
@@ -224,13 +224,13 @@ public:
         };
         
         if (std::is_same_v<bool, T>) {
-            uint16_t data;
+            uint8_t data = 0;
             ModbusError error;
             error = sendRequest(request, &data);
             
             return {error, (data != 0)};
         } else {
-            T data;
+            T data = 0;
             ModbusError error;
             error = sendRequest(request, &data);
             
