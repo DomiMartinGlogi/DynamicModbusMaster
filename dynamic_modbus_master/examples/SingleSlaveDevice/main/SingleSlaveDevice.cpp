@@ -32,7 +32,12 @@ dynamic_modbus_master::ModbusConfig config {
     .rxdPin = CONFIG_MB_UART_RXD,
     .txdPin = CONFIG_MB_UART_TXD,
     .rtsPin = CONFIG_MB_UART_RTS,
-    .baudRate = CONFIG_MB_UART_BAUD_RATE
+    .baudRate = CONFIG_MB_UART_BAUD_RATE,
+    #ifdef CONFIG_MB_COMM_MODE_RTU
+    .modbusMode = MB_MODE_RTU,
+    #elif CONFIG_MB_COMM_MODE_ASCII
+    .modbusMode = MB_MODE_ASCII
+    #endif
 };
 
 SingleSlaveExampleDevice g_exampleDevice(1, 1);

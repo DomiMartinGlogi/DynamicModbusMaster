@@ -22,6 +22,7 @@
 #define DYNAMIC_MODBUS_MASTER_MODBUSCONFIGURATION_H
 
 #include <driver/uart.h>
+#include <esp_modbus_common.h>
 
 namespace dynamic_modbus_master {
 
@@ -34,6 +35,7 @@ namespace dynamic_modbus_master {
  * @param txdPin The pin number of the transmit data (TXD) line.
  * @param rtsPin The pin number of the request-to-send (RTS) line.
  * @param baudRate The baud rate to use for the UART communication.
+ * @param modbusMode The Mode of the Modbus -> RTU or ASCII
  */
 struct ModbusConfig {
     uart_port_t uartPort;
@@ -41,6 +43,7 @@ struct ModbusConfig {
     uint8_t txdPin;
     uint8_t rtsPin;
     uint32_t baudRate;
+    mb_mode_type_t modbusMode;
     };
 }
 

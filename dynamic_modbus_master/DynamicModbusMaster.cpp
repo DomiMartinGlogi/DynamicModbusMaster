@@ -52,6 +52,7 @@ ModbusError DynamicModbusMaster::initialise(ModbusConfig config) {
     
     commInfo.port = m_config.uartPort;
     commInfo.baudrate = m_config.baudRate;
+    commInfo.mode = m_config.modbusMode;
     
     error = mbc_master_setup(&commInfo);
     if (error != ESP_OK) {
