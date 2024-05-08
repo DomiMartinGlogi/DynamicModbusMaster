@@ -38,6 +38,11 @@ public:
     void writeExampleMultipleRegisters(uint32_t data);
     
     void writeExampleFloat(float data);
+    
+    bool readExampleSingleCoil();
+    
+    void writeExampleSingleCoil(bool state);
+    
 private:
     dynamic_modbus_master::slave::SlaveDevice m_device;
 };

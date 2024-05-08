@@ -34,16 +34,20 @@ extern "C" void app_main(void) {
         auto singleRegisterData = g_exampleDevice.readExampleSingleRegister();
         auto multipleRegisterData = g_exampleDevice.readExampleMultipleRegisters();
         auto floatRegisterData = g_exampleDevice.readExampleFloat();
+        auto singleCoilValue = g_exampleDevice.readExampleSingleCoil();
         
         ESP_LOGI("Example Device", "Single Register Read: %u ; Multiple Register Read: %" PRIu32 " ; Float Register Read: %f", singleRegisterData, multipleRegisterData, floatRegisterData);
+        ESP_LOGI("Example Device", "Single Coil Read: %s", (singleCoilValue ? "On" : "Off"));
         
         singleRegisterData++;
         multipleRegisterData++;
         floatRegisterData++;
+        singleCoilValue = !singleCoilValue;
         
         g_exampleDevice.writeExampleSingleRegister(singleRegisterData);
         g_exampleDevice.writeExampleMultipleRegisters(multipleRegisterData);
         g_exampleDevice.writeExampleFloat(floatRegisterData);
+        g_exampleDevice.writeExampleSingleCoil(singleCoilValue);
         
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
