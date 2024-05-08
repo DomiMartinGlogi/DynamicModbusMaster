@@ -46,6 +46,10 @@ public:
     uint16_t readExampleMultipleCoils();
     
     void writeExampleMultipleCoils(uint16_t coilStates);
+    
+    bool readDiscreteInput();
+    
+    uint16_t readInput();
 };
 
 #endif //DYNAMIC_MODBUS_MASTER_SINGLESLAVEEXAMPLEDEVICE_H

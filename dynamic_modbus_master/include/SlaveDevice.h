@@ -66,10 +66,10 @@ public:
     template<ModbusData T>
     ModbusError writeHolding(uint16_t reg, T data) const {
         mb_param_request_t request {
-                .slave_addr = address,
+                .slave_addr = m_address,
             .command = 0x06,
             .reg_start = reg,
-            .reg_size = sizeof(T) / sizeof(uint16_t)
+            .reg_size = (std::is_same_v<bool, T>? 1 : sizeof(T) / 2)
         };
         if (request.reg_size > 1) {
             request.command = 0x10;
@@ -90,7 +90,7 @@ public:
     template<ModbusData T>
     SlaveReturn<T> readHolding(uint16_t reg) const {
         mb_param_request_t request {
-                .slave_addr = address,
+                .slave_addr = m_address,
                 .command = 0x03,
                 .reg_start = reg,
                 .reg_size = sizeof(T) / sizeof(uint16_t)
@@ -123,7 +123,7 @@ public:
     ModbusError writeCoils(uint16_t reg, const T data, uint16_t coilNum) const {
         if (std::is_same_v<T, bool> && coilNum == 1) {
             mb_param_request_t request {
-                .slave_addr = address,
+                .slave_addr = m_address,
                 .command = 0x05,
                 .reg_start = reg,
                 .reg_size = coilNum
@@ -135,7 +135,7 @@ public:
         } else if (!(std::is_same_v<T, bool>) && (coilNum > 1)){
             T sendData = data;
             mb_param_request_t  request {
-                .slave_addr = address,
+                .slave_addr = m_address,
                 .command = 0x0F,
                 .reg_start = reg,
                 .reg_size = coilNum
@@ -163,7 +163,7 @@ public:
     template<ModbusData T>
     SlaveReturn<T> readCoils(uint16_t reg, uint16_t coilNum) {
         mb_param_request_t request {
-            .slave_addr = address,
+            .slave_addr = m_address,
             .command = 0x01,
             .reg_start = reg,
             .reg_size = coilNum
@@ -181,9 +181,66 @@ public:
         }
     }
     
+    /**
+     * @brief Reads data from the input registers of a Modbus slave device.
+     *
+     * @details This function sends a Modbus request to read data from the input registers of a specified register address in a slave device.
+     * The function takes the register address as a parameter and returns a `SlaveReturn` object containing the read data and any error that occurred.
+     *
+     * @tparam T The type of data to be read from the input registers. This type must meet the `ModbusData` concept requirements.
+     * @param reg The register address to start reading from.
+     * @return A `SlaveReturn` object containing the read data and the status of the read request.
+     */
+    template<ModbusData T>
+    SlaveReturn<T> readInputs(uint16_t reg) {
+        mb_param_request_t request {
+            .slave_addr = m_address,
+            .command = 0x04,
+            .reg_start = reg,
+            .reg_size = (std::is_same_v<bool, T>? 1 : sizeof(T) / 2)
+        };
+        
+        T data;
+        ModbusError error;
+        error = sendRequest(request, &data);
+        
+        return {error, data};
+    }
+    
+    /**
+     * @brief Reads data from the discrete inputs of a Modbus slave device.
+     *
+     * @tparam T The type of data to be read from the discrete inputs. This type must meet the `ModbusData` concept requirements.
+     * @param reg The register address to start reading from.
+     * @return A `SlaveReturn` object containing the read data and the status of the read request.
+     */
+    template<ModbusData T>
+    SlaveReturn<T> readDiscreteInputs(uint16_t reg) {
+        mb_param_request_t request {
+                .slave_addr = m_address,
+                .command = 0x02,
+                .reg_start = reg,
+                .reg_size = (std::is_same_v<bool, T>? 1 : sizeof(T) * 8)
+        };
+        
+        if (std::is_same_v<bool, T>) {
+            uint16_t data;
+            ModbusError error;
+            error = sendRequest(request, &data);
+            
+            return {error, (data != 0)};
+        } else {
+            T data;
+            ModbusError error;
+            error = sendRequest(request, &data);
+            
+            return {error, data};
+        }
+    }
+    
 private:
-    uint8_t address;
-    uint8_t retries;
+    uint8_t m_address;
+    uint8_t m_retries;
     
     /**
      * @brief Helper function to send a modbus request
