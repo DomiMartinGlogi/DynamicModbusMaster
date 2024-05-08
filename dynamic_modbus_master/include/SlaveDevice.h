@@ -121,7 +121,6 @@ public:
      */
     template<ModbusData T>
     ModbusError writeCoils(uint16_t reg, const T data, uint16_t coilNum) const {
-        T sendData = data;
         if (std::is_same_v<T, bool> && coilNum == 1) {
             mb_param_request_t request {
                 .slave_addr = address,
@@ -130,8 +129,11 @@ public:
                 .reg_size = coilNum
             };
             
+            uint16_t sendData = (data == true ? 0xFF00 : 0x0000);
+            
             return sendRequest(request, &sendData);
         } else if (!(std::is_same_v<T, bool>) && (coilNum > 1)){
+            T sendData = data;
             mb_param_request_t  request {
                 .slave_addr = address,
                 .command = 0x0F,

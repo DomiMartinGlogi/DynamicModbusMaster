@@ -87,3 +87,18 @@ void AggregateDevice::writeExampleSingleCoil(bool state) {
         ESP_LOGE("SingleSlaveExampleDevice", "Failed to write Coil %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(error).c_str());
     }
 }
+
+uint16_t AggregateDevice::readExampleMultipleCoils() {
+    dynamic_modbus_master::slave::SlaveReturn<uint16_t> slaveReturn = m_device.readCoils<uint16_t>(1, 16);
+    if (slaveReturn.error != dynamic_modbus_master::ModbusError::OK) {
+        ESP_LOGE("SingleSlaveExampleDevice", "Failed to read Coils %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(slaveReturn.error).c_str());
+    }
+    return slaveReturn.data;
+}
+
+void AggregateDevice::writeExampleMultipleCoils(uint16_t coilStates) {
+    dynamic_modbus_master::ModbusError error = m_device.writeCoils(1, coilStates, 16);
+    if (error != dynamic_modbus_master::ModbusError::OK) {
+        ESP_LOGE("SingleSlaveExampleDevice", "Failed to write Coil %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(error).c_str());
+    }
+}

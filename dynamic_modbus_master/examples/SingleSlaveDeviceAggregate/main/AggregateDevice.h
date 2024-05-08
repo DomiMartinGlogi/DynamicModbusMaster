@@ -43,6 +43,10 @@ public:
     
     void writeExampleSingleCoil(bool state);
     
+    uint16_t readExampleMultipleCoils();
+    
+    void writeExampleMultipleCoils(uint16_t coilStates);
+    
 private:
     dynamic_modbus_master::slave::SlaveDevice m_device;
 };
