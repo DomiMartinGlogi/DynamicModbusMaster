@@ -1,4 +1,4 @@
-version: "0.0.1"
+version: "0.2.0"
 description: "Single Slave Device Aggregation Example"
 dependencies:
   domimartinglogi/dynamic_modbus_master:

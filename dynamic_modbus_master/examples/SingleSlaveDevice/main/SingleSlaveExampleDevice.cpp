@@ -72,3 +72,50 @@ void SingleSlaveExampleDevice::writeExampleFloat(float data) {
         ESP_LOGE("SingleSlaveExampleDevice", "Failed to write Data %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(error).c_str());
     }
 }
+
+uint16_t SingleSlaveExampleDevice::readExampleMultipleCoils() {
+    dynamic_modbus_master::slave::SlaveReturn<uint16_t> slaveReturn = readCoils<uint16_t>(1, 16);
+    if (slaveReturn.error != dynamic_modbus_master::ModbusError::OK) {
+        ESP_LOGE("SingleSlaveExampleDevice", "Failed to read Coils %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(slaveReturn.error).c_str());
+    }
+    return slaveReturn.data;
+}
+
+void SingleSlaveExampleDevice::writeExampleMultipleCoils(uint16_t coilStates) {
+    dynamic_modbus_master::ModbusError error = writeCoils(1, coilStates, 16);
+    if (error != dynamic_modbus_master::ModbusError::OK) {
+        ESP_LOGE("SingleSlaveExampleDevice", "Failed to write Coil %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(error).c_str());
+    }
+}
+
+bool SingleSlaveExampleDevice::readExampleSingleCoil() {
+    dynamic_modbus_master::slave::SlaveReturn<bool> slaveReturn = readCoils<bool>(0, 1);
+    if (slaveReturn.error != dynamic_modbus_master::ModbusError::OK) {
+        ESP_LOGE("SingleSlaveExampleDevice", "Failed to read Coil %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(slaveReturn.error).c_str());
+    }
+    return slaveReturn.data;
+}
+
+void SingleSlaveExampleDevice::writeExampleSingleCoil(bool state) {
+    dynamic_modbus_master::ModbusError error = writeCoils(0, state, 1);
+    if (error != dynamic_modbus_master::ModbusError::OK) {
+        ESP_LOGE("SingleSlaveExampleDevice", "Failed to write Coil %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(error).c_str());
+    }
+}
+
+bool SingleSlaveExampleDevice::readDiscreteInput() {
+    dynamic_modbus_master::slave::SlaveReturn<bool> slaveReturn = readDiscreteInputs<bool>(0);
+    if (slaveReturn.error != dynamic_modbus_master::ModbusError::OK) {
+        ESP_LOGE("SingleSlaveExampleDevice", "Failed to read Discrete Input %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(slaveReturn.error).c_str());
+    }
+    return slaveReturn.data;
+}
+
+uint16_t SingleSlaveExampleDevice::readInput() {
+    dynamic_modbus_master::slave::SlaveReturn<uint16_t> slaveReturn = readInputs<uint16_t>(0);
+    if (slaveReturn.error != dynamic_modbus_master::ModbusError::OK) {
+        ESP_LOGE("SingleSlaveExampleDevice", "Failed to read Input %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(slaveReturn.error).c_str());
+        return -1;
+    }
+    return slaveReturn.data;
+}

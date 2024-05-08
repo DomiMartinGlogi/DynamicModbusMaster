@@ -12,13 +12,31 @@ This example is best used with either a PC-Based Modbus Slave Emulator (A potent
 [here](https://www.modbustools.com/modbus_slave.html)) or a physical device that offers similar functionality.
 
 When this example works correctly it should:
-1. Read Registers 1,2, and 4 for Slave 1
+1. Read Holding Registers 1,2/3, and 4/5 for Slave 1
+2. Read Coils 0-16 for Slave 1
+3. Read Discrete Input 0 for Slave 1
+4. Read Input 0 for Slave 1
 2. Print their contents to the console
-3. Increment their values by 1
+3. Increment their values by 1/flip their values, where applicable
 4. Write them to their origin Registers.
 5. Wait 1000ms and Repeat
 
-Registers 1, 2 and 4 are interpreted as `uint16_t`, `uint32_t` and `float` respectively.
+### Registers
+
+| Number            | Interpreted Type |
+|:------------------|-----------------:|
+| Holding Registers |
+| 1                 |       `uint16_t` |
+| 2 - 3             |       `uint32_t` |
+| 4 - 5             |          `float` |
+| Coils             |
+| 0                 |           `bool` |
+| 1 - 16            |       `uint16_t` |
+| Discrete Inputs   |
+| 0                 |           `bool` |
+| Inputs            |
+| 0                 |       `uint16_t` |
+
 
 ## Compatible Devices
 

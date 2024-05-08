@@ -23,7 +23,7 @@
 
 #include <SlaveDevice.h>
 
-class SingleSlaveExampleDevice : public dynamic_modbus_master::slave::SlaveDevice{
+class SingleSlaveExampleDevice : private dynamic_modbus_master::slave::SlaveDevice{
 public:
     SingleSlaveExampleDevice(uint8_t address, uint8_t retries);
     
@@ -38,6 +38,18 @@ public:
     void writeExampleMultipleRegisters(uint32_t data);
     
     void writeExampleFloat(float data);
+    
+    bool readExampleSingleCoil();
+    
+    void writeExampleSingleCoil(bool state);
+    
+    uint16_t readExampleMultipleCoils();
+    
+    void writeExampleMultipleCoils(uint16_t coilStates);
+    
+    bool readDiscreteInput();
+    
+    uint16_t readInput();
 };
 
 #endif //DYNAMIC_MODBUS_MASTER_SINGLESLAVEEXAMPLEDEVICE_H

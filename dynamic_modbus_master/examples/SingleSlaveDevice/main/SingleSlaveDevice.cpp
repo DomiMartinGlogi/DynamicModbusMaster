@@ -32,7 +32,12 @@ dynamic_modbus_master::ModbusConfig config {
     .rxdPin = CONFIG_MB_UART_RXD,
     .txdPin = CONFIG_MB_UART_TXD,
     .rtsPin = CONFIG_MB_UART_RTS,
-    .baudRate = CONFIG_MB_UART_BAUD_RATE
+    .baudRate = CONFIG_MB_UART_BAUD_RATE,
+    #ifdef CONFIG_MB_COMM_MODE_RTU
+    .modbusMode = MB_MODE_RTU,
+    #elif CONFIG_MB_COMM_MODE_ASCII
+    .modbusMode = MB_MODE_ASCII
+    #endif
 };
 
 SingleSlaveExampleDevice g_exampleDevice(1, 1);
@@ -54,16 +59,26 @@ extern "C" void app_main() {
         auto singleRegisterData = g_exampleDevice.readExampleSingleRegister();
         auto multipleRegisterData = g_exampleDevice.readExampleMultipleRegisters();
         auto floatRegisterData = g_exampleDevice.readExampleFloat();
+        auto singleCoilValue = g_exampleDevice.readExampleSingleCoil();
+        auto multipleCoilValue = g_exampleDevice.readExampleMultipleCoils();
+        auto discreteInputValue = g_exampleDevice.readDiscreteInput();
+        auto inputValue = g_exampleDevice.readInput();
         
         ESP_LOGI("Example Device", "Single Register Read: %u ; Multiple Register Read: %" PRIu32 " ; Float Register Read: %f", singleRegisterData, multipleRegisterData, floatRegisterData);
+        ESP_LOGI("Example Device", "Single Coil Read: %s ; Multiple Coil Read: %u", (singleCoilValue ? "On" : "Off"), multipleCoilValue);
+        ESP_LOGI("Example Device", "Discrete Input State: %s ; Input Value: %u", (discreteInputValue ? "On" : "Off"), inputValue);
         
         singleRegisterData++;
         multipleRegisterData++;
         floatRegisterData++;
+        singleCoilValue = !singleCoilValue;
+        multipleCoilValue++;
         
         g_exampleDevice.writeExampleSingleRegister(singleRegisterData);
         g_exampleDevice.writeExampleMultipleRegisters(multipleRegisterData);
         g_exampleDevice.writeExampleFloat(floatRegisterData);
+        g_exampleDevice.writeExampleSingleCoil(singleCoilValue);
+        g_exampleDevice.writeExampleMultipleCoils(multipleCoilValue);
         
         vTaskDelay(pdMS_TO_TICKS(1000));
     }

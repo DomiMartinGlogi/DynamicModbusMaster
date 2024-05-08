@@ -80,6 +80,68 @@ public:
     SlaveReturn<D> readHolding(uint16_t reg) const {
         return static_cast<T const*>(this)->template readHolding<D>(reg);
     }
+    
+    /**
+     * @brief Write data to a group of coils
+     *
+     * @details This method writes the provided data to a group of coils starting at the specified coil address.
+     *
+     * @param reg The coil address to start writing data to
+     * @param data The data to be written to the coils
+     * @param coilNum The number of coils to write data to
+     * @tparam D The type of data to be written, must fulfill the ModbusData concept.
+     * @return A ModbusError value indicating the success or failure of the write operation
+     */
+    template<ModbusData D>
+    ModbusError writeCoils(uint16_t reg, const D& data, uint16_t coilNum) {
+        return static_cast<T const*>(this)->template writeCoils<D>(reg, data, coilNum);
+    }
+    
+    /**
+     * @brief Read data from a group of coils
+     *
+     * @details This method reads data from a group of coils starting at the specified coil address.
+     *
+     * @param reg The coil address to start reading data from
+     * @param coilNum The number of coils to read data from
+     * @tparam D The type as which the read Data will be returned, must fulfill the ModbusData concept.
+     * @return A SlaveReturn structure containing the read data and any errors encountered during the read operation
+     */
+    template<ModbusData D>
+    SlaveReturn<D> readCoils(uint16_t reg, uint16_t coilNum) {
+        return static_cast<T const *>(this)->template readCoils<D>(reg, coilNum);
+    }
+    
+    /**
+    * @brief Read data from input registers
+    *
+    * @details This method reads data from input registers at the specified register address. Input registers are read-only
+    * and contain data from the slave device.
+    *
+    * @param reg The register address to read the data from
+    * @tparam D The type of data to be read from input registers, must fulfill the ModbusData concept
+    * @return A SlaveReturn structure containing the read data and any errors encountered during the read operation
+    */
+    template<ModbusData D>
+    SlaveReturn<D> readInputs(uint16_t reg) {
+        return static_cast<T const *>(this)->template readInputs<D>(reg);
+    }
+    
+    /**
+     * @brief Reads data from discrete inputs in a Modbus slave device.
+     *
+     * @details This function reads data from discrete inputs in a Modbus slave device at the specified register address.
+     * The function is templated to allow reading data of different types. The type of data to be read must fulfill the
+     * ModbusData concept. The function delegates the actual implementation to the derived class implementing the interface.
+     *
+     * @tparam D The type of data to be read, must fulfill the ModbusData concept
+     * @param reg The register address to read the data from
+     * @return A SlaveReturn structure containing the read data and any errors encountered during the read operation
+     */
+    template<ModbusData D>
+    SlaveReturn<D> readDiscreteInputs(uint16_t reg) {
+        return static_cast<T const *>(this)->template readDiscreteInputs<D>(reg);
+    }
 };
 }
 

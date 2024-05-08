@@ -22,12 +22,15 @@
 #define DYNAMIC_MODBUS_MASTER_MODBUSDATA_HPP
 
 #include <cinttypes>
+#include <type_traits>
 #include "ModbusError.h"
 
 namespace dynamic_modbus_master {
 /**
  * @brief Concept to check if a given Type T can be represented in modbus registers, constrains T to be
  * at least 16-Bits or the size of a single modbus Register.
+ * The only exception being coil registers and discrete input registers, which are either directly represented
+ * as booleans or as 8 boolean values packed into 1 or more bytes.
  *
  * @f{eqnarray*}{
  * sizeof(T) \geq sizeof(\text{Modbus Register})
@@ -35,7 +38,9 @@ namespace dynamic_modbus_master {
  * @tparam T The type to check.
  */
 template<typename T>
-concept ModbusData = (sizeof(T) % sizeof(uint16_t) == 0) && (sizeof(T) > 0);
+concept ModbusData =
+        (std::is_same_v<T, uint8_t>) || (std::is_same_v<T, bool>) ||
+        ((sizeof(T) % sizeof(uint16_t) == 0) && (sizeof(T) > 0));
 
 namespace slave {
 
