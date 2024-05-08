@@ -37,6 +37,10 @@ namespace dynamic_modbus_master::slave {
  * from dynamic_modbus_master::slave::SlaveDevice which provides a generally good way to access a
  * device.
  *
+ * @note for further info on CRTP see <a href="https://en.cppreference.com/w/cpp/language/crtp"> cppreference </a>,
+ * <a href="https://en.wikipedia.org/wiki/Curiously_recurring_template_pattern"> Wikipedia </a> or
+ * <a href="https://www.fluentcpp.com/2017/05/12/curiously-recurring-template-pattern/"> FluentCPP </a>
+ *
  * @tparam T The derived class that implements the interface
  */
 template<class T>

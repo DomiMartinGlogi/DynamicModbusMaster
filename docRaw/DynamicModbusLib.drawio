@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-05-03T12:54:54.848Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.1 Chrome/112.0.5615.204 Electron/24.6.1 Safari/537.36" etag="T2FVKKoqNd5qaxmFCUv5" version="21.6.1" type="device" pages="3">
+<mxfile host="Electron" modified="2024-05-08T06:40:28.313Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.6.1 Chrome/112.0.5615.204 Electron/24.6.1 Safari/537.36" etag="0t1fJY-Cj6oDw5ci-UrK" version="21.6.1" type="device" pages="3">
   <diagram name="Draft" id="DAKvcVDo-ZZ99UPyVtKY">
-    <mxGraphModel dx="1434" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1418" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -114,11 +114,11 @@
     </mxGraphModel>
   </diagram>
   <diagram id="PCSUckUO8QMz1GBrrEyi" name="FunctionalUnits">
-    <mxGraphModel dx="1423" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1418" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="VfaxGDLPg75RlIsruWCl-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_QX3n1XLOQL_BcSajAnO-5" target="VfaxGDLPg75RlIsruWCl-1">
+        <mxCell id="VfaxGDLPg75RlIsruWCl-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="_QX3n1XLOQL_BcSajAnO-5" target="VfaxGDLPg75RlIsruWCl-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="580" y="220" />
@@ -126,13 +126,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="VfaxGDLPg75RlIsruWCl-4" value="Bus Management Functions" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VfaxGDLPg75RlIsruWCl-3">
+        <mxCell id="VfaxGDLPg75RlIsruWCl-4" value="Bus Management Functions" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="VfaxGDLPg75RlIsruWCl-3" vertex="1" connectable="0">
           <mxGeometry x="0.024" y="-4" relative="1" as="geometry">
             <mxPoint x="-68" y="16" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_QX3n1XLOQL_BcSajAnO-5" value="Modbus Master" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="480" y="281" width="200" height="208" as="geometry" />
+          <mxGeometry x="480" y="281" width="200" height="182" as="geometry" />
         </mxCell>
         <mxCell id="_QX3n1XLOQL_BcSajAnO-6" value="Bus Config" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="_QX3n1XLOQL_BcSajAnO-5" vertex="1">
           <mxGeometry y="26" width="200" height="26" as="geometry" />
@@ -152,10 +152,7 @@
         <mxCell id="_QX3n1XLOQL_BcSajAnO-15" value="Adjustable Bus Baudrate&amp;nbsp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="_QX3n1XLOQL_BcSajAnO-5" vertex="1">
           <mxGeometry y="156" width="200" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="_QX3n1XLOQL_BcSajAnO-16" value="Slave Address Tracking/Registering" style="text;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="_QX3n1XLOQL_BcSajAnO-5" vertex="1">
-          <mxGeometry y="182" width="200" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="VfaxGDLPg75RlIsruWCl-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_QX3n1XLOQL_BcSajAnO-10" target="VfaxGDLPg75RlIsruWCl-1">
+        <mxCell id="VfaxGDLPg75RlIsruWCl-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="_QX3n1XLOQL_BcSajAnO-10" target="VfaxGDLPg75RlIsruWCl-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="900" y="220" />
@@ -163,51 +160,45 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="VfaxGDLPg75RlIsruWCl-5" value="Read/Write Requests" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="VfaxGDLPg75RlIsruWCl-2">
+        <mxCell id="VfaxGDLPg75RlIsruWCl-5" value="Read/Write Requests" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="VfaxGDLPg75RlIsruWCl-2" vertex="1" connectable="0">
           <mxGeometry x="-0.048" y="1" relative="1" as="geometry">
             <mxPoint x="58" y="19" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="_QX3n1XLOQL_BcSajAnO-10" value="Slave Device" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="790" y="281" width="200" height="186" as="geometry" />
+          <mxGeometry x="790" y="281" width="200" height="156" as="geometry" />
         </mxCell>
         <mxCell id="_QX3n1XLOQL_BcSajAnO-11" value="Read/Write Holding Registers" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="_QX3n1XLOQL_BcSajAnO-10" vertex="1">
           <mxGeometry y="26" width="200" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="bmCvWPuXrtBWKnb-xktR-15" value="Check if address Available on Init" style="text;strokeColor=#82b366;fillColor=#d5e8d4;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="_QX3n1XLOQL_BcSajAnO-10">
-          <mxGeometry y="52" width="200" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="_QX3n1XLOQL_BcSajAnO-12" value="Retries" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="_QX3n1XLOQL_BcSajAnO-10" vertex="1">
-          <mxGeometry y="82" width="200" height="26" as="geometry" />
+          <mxGeometry y="52" width="200" height="26" as="geometry" />
         </mxCell>
         <mxCell id="_QX3n1XLOQL_BcSajAnO-13" value="Read/Write Coils" style="text;strokeColor=none;fillColor=#ffe6cc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;strokeWidth=0;rounded=0;glass=0;" parent="_QX3n1XLOQL_BcSajAnO-10" vertex="1">
-          <mxGeometry y="108" width="200" height="26" as="geometry" />
+          <mxGeometry y="78" width="200" height="26" as="geometry" />
         </mxCell>
         <mxCell id="_QX3n1XLOQL_BcSajAnO-17" value="Read Inputs" style="text;strokeColor=none;fillColor=#ffe6cc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="_QX3n1XLOQL_BcSajAnO-10" vertex="1">
-          <mxGeometry y="134" width="200" height="26" as="geometry" />
+          <mxGeometry y="104" width="200" height="26" as="geometry" />
         </mxCell>
         <mxCell id="_QX3n1XLOQL_BcSajAnO-18" value="Read Discrete Inputs" style="text;strokeColor=none;fillColor=#ffe6cc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="_QX3n1XLOQL_BcSajAnO-10" vertex="1">
-          <mxGeometry y="160" width="200" height="26" as="geometry" />
+          <mxGeometry y="130" width="200" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="bmCvWPuXrtBWKnb-xktR-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bmCvWPuXrtBWKnb-xktR-1" target="_QX3n1XLOQL_BcSajAnO-6">
+        <mxCell id="bmCvWPuXrtBWKnb-xktR-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="bmCvWPuXrtBWKnb-xktR-1" target="_QX3n1XLOQL_BcSajAnO-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="bmCvWPuXrtBWKnb-xktR-1" value="ModbusConfig" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="bmCvWPuXrtBWKnb-xktR-1" value="ModbusConfig" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="160" y="280" width="200" height="116" as="geometry" />
         </mxCell>
-        <mxCell id="bmCvWPuXrtBWKnb-xktR-11" value="Modbus Pins" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="bmCvWPuXrtBWKnb-xktR-1">
+        <mxCell id="bmCvWPuXrtBWKnb-xktR-11" value="Modbus Pins" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="bmCvWPuXrtBWKnb-xktR-1" vertex="1">
           <mxGeometry y="26" width="200" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="bmCvWPuXrtBWKnb-xktR-13" value="Modbus UART Port" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="bmCvWPuXrtBWKnb-xktR-1">
+        <mxCell id="bmCvWPuXrtBWKnb-xktR-13" value="Modbus UART Port" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="bmCvWPuXrtBWKnb-xktR-1" vertex="1">
           <mxGeometry y="56" width="200" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="bmCvWPuXrtBWKnb-xktR-14" value="Baudrate" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="bmCvWPuXrtBWKnb-xktR-1">
+        <mxCell id="bmCvWPuXrtBWKnb-xktR-14" value="Baudrate" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="bmCvWPuXrtBWKnb-xktR-1" vertex="1">
           <mxGeometry y="86" width="200" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="pPeVBYNnYtQIRBElv-DT-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="1" source="bmCvWPuXrtBWKnb-xktR-15" target="_QX3n1XLOQL_BcSajAnO-16">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="VfaxGDLPg75RlIsruWCl-1" value="ESP-Modbus" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="VfaxGDLPg75RlIsruWCl-1" value="ESP-Modbus" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="680" y="110" width="110" height="50" as="geometry" />
         </mxCell>
         <mxCell id="4mOKoIknoaYYa3ghUdYb-3" value="Modbus Serial" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -216,16 +207,16 @@
         <mxCell id="4mOKoIknoaYYa3ghUdYb-1" value="Modbus TCP" style="text;strokeColor=none;fillColor=#ffe6cc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;strokeWidth=0;rounded=0;glass=0;" parent="1" vertex="1">
           <mxGeometry x="680" y="50" width="200" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="VfaxGDLPg75RlIsruWCl-7" value="User Space" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#dae8fc;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="VfaxGDLPg75RlIsruWCl-7" value="User Space" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=#dae8fc;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="800" y="520" width="160" height="78" as="geometry" />
         </mxCell>
-        <mxCell id="VfaxGDLPg75RlIsruWCl-8" value="Register Mapping" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VfaxGDLPg75RlIsruWCl-7">
+        <mxCell id="VfaxGDLPg75RlIsruWCl-8" value="Register Mapping" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VfaxGDLPg75RlIsruWCl-7" vertex="1">
           <mxGeometry y="26" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="VfaxGDLPg75RlIsruWCl-12" value="Device Management" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VfaxGDLPg75RlIsruWCl-7">
+        <mxCell id="VfaxGDLPg75RlIsruWCl-12" value="Device Management" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VfaxGDLPg75RlIsruWCl-7" vertex="1">
           <mxGeometry y="52" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="VfaxGDLPg75RlIsruWCl-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="VfaxGDLPg75RlIsruWCl-7" target="_QX3n1XLOQL_BcSajAnO-10">
+        <mxCell id="VfaxGDLPg75RlIsruWCl-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="VfaxGDLPg75RlIsruWCl-7" target="_QX3n1XLOQL_BcSajAnO-10" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="890" y="510" />
@@ -233,217 +224,257 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="VfaxGDLPg75RlIsruWCl-13" value="The User has to handle managing devices themselves, the Driver only checks whether an address is currently in use.&lt;br&gt;This includes the potential creation of a broadcast device.&lt;br&gt;The user should be informed if they attempt to register a device with a previously defined address." style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=center;" vertex="1" parent="1">
+        <mxCell id="VfaxGDLPg75RlIsruWCl-13" value="The User has to handle managing devices themselves, the Driver only checks whether an address is currently in use.&lt;br&gt;This includes the potential creation of a broadcast device.&lt;br&gt;The user should be informed if they attempt to register a device with a previously defined address." style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=center;" parent="1" vertex="1">
           <mxGeometry x="560" y="500" width="200" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="VfaxGDLPg75RlIsruWCl-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="VfaxGDLPg75RlIsruWCl-12" target="VfaxGDLPg75RlIsruWCl-13">
+        <mxCell id="VfaxGDLPg75RlIsruWCl-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="1" source="VfaxGDLPg75RlIsruWCl-12" target="VfaxGDLPg75RlIsruWCl-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="VfaxGDLPg75RlIsruWCl-15" value="The User has to define their own device types and manage them accordingly with the correct Register Mapping. This includes a potential Broadcast Device." style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=center;" vertex="1" parent="1">
+        <mxCell id="VfaxGDLPg75RlIsruWCl-15" value="The User has to define their own device types and manage them accordingly with the correct Register Mapping. This includes a potential Broadcast Device." style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=center;" parent="1" vertex="1">
           <mxGeometry x="1000" y="503.5" width="200" height="111" as="geometry" />
         </mxCell>
-        <mxCell id="VfaxGDLPg75RlIsruWCl-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="VfaxGDLPg75RlIsruWCl-8" target="VfaxGDLPg75RlIsruWCl-15">
+        <mxCell id="VfaxGDLPg75RlIsruWCl-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" parent="1" source="VfaxGDLPg75RlIsruWCl-8" target="VfaxGDLPg75RlIsruWCl-15" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="qDJRZey6qMTdu895bT-i" name="Class+Namespace Diagram">
-    <mxGraphModel dx="1423" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1418" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="vk03pX7MdPcYir0Ev3Wm-1" value="dynamic_modbus_master" style="shape=folder;fontStyle=1;tabWidth=160;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=0;collapsible=0;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="40" y="39" width="950" height="791" as="geometry" />
+        <mxCell id="vk03pX7MdPcYir0Ev3Wm-1" value="dynamic_modbus_master" style="shape=folder;fontStyle=1;tabWidth=160;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=0;collapsible=0;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="40" y="39" width="1280" height="791" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-1" value="&lt;i&gt;&amp;lt;&amp;lt;struct&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;ModbusConfiguration&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-1" value="&lt;i&gt;&amp;lt;&amp;lt;struct&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;ModbusConfiguration&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="60" y="100" width="140" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-2" value="+ uartPort: uart_port_t" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-1">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-2" value="+ uartPort: uart_port_t" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VPz8lY35UNi245Cyy11Z-1" vertex="1">
           <mxGeometry y="40" width="140" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-3" value="+ rxdPin: uint8_t" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-1">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-3" value="+ rxdPin: uint8_t" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VPz8lY35UNi245Cyy11Z-1" vertex="1">
           <mxGeometry y="60" width="140" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-4" value="+ txdPin: uint8_t" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-1">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-4" value="+ txdPin: uint8_t" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VPz8lY35UNi245Cyy11Z-1" vertex="1">
           <mxGeometry y="80" width="140" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-5" value="+ rtsPin: uint8_t" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-1">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-5" value="+ rtsPin: uint8_t" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VPz8lY35UNi245Cyy11Z-1" vertex="1">
           <mxGeometry y="100" width="140" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-6" value="+ baudRate: size_t" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-1">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-6" value="+ baudRate: size_t" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VPz8lY35UNi245Cyy11Z-1" vertex="1">
           <mxGeometry y="120" width="140" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-12" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="VPz8lY35UNi245Cyy11Z-7" target="VPz8lY35UNi245Cyy11Z-1">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-12" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" parent="1" source="VPz8lY35UNi245Cyy11Z-7" target="VPz8lY35UNi245Cyy11Z-1" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="440" y="410" as="sourcePoint" />
             <mxPoint x="600" y="410" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="vk03pX7MdPcYir0Ev3Wm-2" value="" style="html=1;strokeColor=none;resizeWidth=1;resizeHeight=1;fillColor=none;part=1;connectable=0;allowArrows=0;deletable=0;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="vk03pX7MdPcYir0Ev3Wm-2" value="" style="html=1;strokeColor=none;resizeWidth=1;resizeHeight=1;fillColor=none;part=1;connectable=0;allowArrows=0;deletable=0;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="1030" y="49" as="geometry">
             <mxPoint x="990" y="10" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-7" value="DynamicModbusMaster" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="50" y="415" width="320" height="174" as="geometry" />
+        <mxCell id="VPz8lY35UNi245Cyy11Z-7" value="DynamicModbusMaster" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="50" y="415" width="320" height="134" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-8" value="- registeredDevices: std::vector&amp;lt;uint8_t&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-7">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-11" value="- config: ModbusConfiguration" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VPz8lY35UNi245Cyy11Z-7" vertex="1">
           <mxGeometry y="26" width="320" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-11" value="- CONFIG: ModbusConfiguration" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-7">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-25" value="- handle: void*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VPz8lY35UNi245Cyy11Z-7" vertex="1">
           <mxGeometry y="46" width="320" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-25" value="- handler: void*" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-7">
-          <mxGeometry y="66" width="320" height="20" as="geometry" />
+        <mxCell id="VPz8lY35UNi245Cyy11Z-9" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="VPz8lY35UNi245Cyy11Z-7" vertex="1">
+          <mxGeometry y="66" width="320" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-9" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-7">
-          <mxGeometry y="86" width="320" height="8" as="geometry" />
+        <mxCell id="VPz8lY35UNi245Cyy11Z-10" value="+ initialise(config: ModbusConfiguration): ModbusError" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VPz8lY35UNi245Cyy11Z-7" vertex="1">
+          <mxGeometry y="74" width="320" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-10" value="+ initialise(config: ModbusConfiguration): ModbusError" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-7">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-13" value="+ start(): ModbusError" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VPz8lY35UNi245Cyy11Z-7" vertex="1">
           <mxGeometry y="94" width="320" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-13" value="+ start(): ModbusError" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-7">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-24" value="+ stop(): ModbusError" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VPz8lY35UNi245Cyy11Z-7" vertex="1">
           <mxGeometry y="114" width="320" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-24" value="+ stop(): ModbusError" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-7">
-          <mxGeometry y="134" width="320" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="xgImv8e9ZDbBjePJAMn--1" value="+ registerAddress(address: uint8_t): bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-7">
-          <mxGeometry y="154" width="320" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-14" value="&lt;i&gt;&amp;lt;&amp;lt;enumaration&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;ModbusError&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-14" value="&lt;i&gt;&amp;lt;&amp;lt;enumaration&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;ModbusError&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="280" y="99" width="180" height="220" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-15" value="+ OK" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-14">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-15" value="+ OK" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VPz8lY35UNi245Cyy11Z-14" vertex="1">
           <mxGeometry y="40" width="180" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-16" value="+ INVALID_ARG" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-14">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-16" value="+ INVALID_ARG" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VPz8lY35UNi245Cyy11Z-14" vertex="1">
           <mxGeometry y="60" width="180" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-17" value="+ INVALID_RESPONSE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-14">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-17" value="+ INVALID_RESPONSE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VPz8lY35UNi245Cyy11Z-14" vertex="1">
           <mxGeometry y="80" width="180" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-18" value="+ ADDRESS_UNAVAILABLE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-14">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-18" value="+ ADDRESS_UNAVAILABLE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VPz8lY35UNi245Cyy11Z-14" vertex="1">
           <mxGeometry y="100" width="180" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-19" value="+ SLAVE_NOT_SUPPORTED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-14">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-19" value="+ SLAVE_NOT_SUPPORTED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VPz8lY35UNi245Cyy11Z-14" vertex="1">
           <mxGeometry y="120" width="180" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-22" value="+ PORT_NOT_SUPPORTED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-14">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-22" value="+ PORT_NOT_SUPPORTED" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VPz8lY35UNi245Cyy11Z-14" vertex="1">
           <mxGeometry y="140" width="180" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-23" value="+ INVALID_STATE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-14">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-23" value="+ INVALID_STATE" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VPz8lY35UNi245Cyy11Z-14" vertex="1">
           <mxGeometry y="160" width="180" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-20" value="+ TIMEOUT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-14">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-20" value="+ TIMEOUT" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VPz8lY35UNi245Cyy11Z-14" vertex="1">
           <mxGeometry y="180" width="180" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-21" value="+ FAILURE_OR_EXCEPTION" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-14">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-21" value="+ FAILURE_OR_EXCEPTION" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VPz8lY35UNi245Cyy11Z-14" vertex="1">
           <mxGeometry y="200" width="180" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-26" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="VPz8lY35UNi245Cyy11Z-7" target="VPz8lY35UNi245Cyy11Z-14">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-26" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" parent="1" source="VPz8lY35UNi245Cyy11Z-7" target="VPz8lY35UNi245Cyy11Z-14" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="331.40999999999997" y="765.4285714285716" as="sourcePoint" />
             <mxPoint x="267.01" y="543.4642857142858" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-27" value="&lt;b&gt;ModbusErrorHelper&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-27" value="&lt;b&gt;ModbusErrorHelper&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="460" y="99" width="310" height="46" as="geometry" />
         </mxCell>
-        <mxCell id="VPz8lY35UNi245Cyy11Z-28" value="&lt;u&gt;+ ModbusErrorToName(error: ModbusError): std::string&lt;/u&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VPz8lY35UNi245Cyy11Z-27">
+        <mxCell id="VPz8lY35UNi245Cyy11Z-28" value="&lt;u&gt;+ ModbusErrorToName(error: ModbusError): std::string&lt;/u&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VPz8lY35UNi245Cyy11Z-27" vertex="1">
           <mxGeometry y="26" width="310" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="QrdkW7T1nTLagJ9Bv4TJ-9" value="slave" style="shape=folder;fontStyle=1;tabWidth=110;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=0;collapsible=0;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="500" y="260" width="480" height="500" as="geometry" />
+        <mxCell id="QrdkW7T1nTLagJ9Bv4TJ-9" value="slave" style="shape=folder;fontStyle=1;tabWidth=110;tabHeight=30;tabPosition=left;html=1;boundedLbl=1;labelInHeader=1;container=0;collapsible=0;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="500" y="260" width="800" height="500" as="geometry" />
         </mxCell>
-        <mxCell id="QrdkW7T1nTLagJ9Bv4TJ-12" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="QrdkW7T1nTLagJ9Bv4TJ-5" target="VPz8lY35UNi245Cyy11Z-14">
+        <mxCell id="QrdkW7T1nTLagJ9Bv4TJ-12" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" parent="1" source="QrdkW7T1nTLagJ9Bv4TJ-5" target="VPz8lY35UNi245Cyy11Z-14" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="380" y="454" as="sourcePoint" />
             <mxPoint x="520" y="408" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="VKu6VAgroe6weIauCGJJ-11" value="&lt;i style=&quot;font-weight: normal;&quot;&gt;&amp;lt;&amp;lt;concept&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;ModbusData" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="VKu6VAgroe6weIauCGJJ-11" value="&lt;i style=&quot;font-weight: normal;&quot;&gt;&amp;lt;&amp;lt;concept&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;ModbusData" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="260" y="629" width="160" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="VKu6VAgroe6weIauCGJJ-17" value="Only types that are of sizes supported by modbus, ie, where (sizeof(T) % 16 == 0) and where (sizeof(T) &amp;gt; 0)" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=center;" vertex="1" parent="VKu6VAgroe6weIauCGJJ-11">
+        <mxCell id="VKu6VAgroe6weIauCGJJ-17" value="Only types that are of sizes supported by modbus, ie, where (sizeof(T) % 16 == 0) and where (sizeof(T) &amp;gt; 0)" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=center;" parent="VKu6VAgroe6weIauCGJJ-11" vertex="1">
           <mxGeometry y="40" width="160" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="QrdkW7T1nTLagJ9Bv4TJ-10" value="" style="html=1;strokeColor=none;resizeWidth=1;resizeHeight=1;fillColor=none;part=1;connectable=0;allowArrows=0;deletable=0;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="QrdkW7T1nTLagJ9Bv4TJ-10" value="" style="html=1;strokeColor=none;resizeWidth=1;resizeHeight=1;fillColor=none;part=1;connectable=0;allowArrows=0;deletable=0;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="1110" y="290" width="36.82539682539683" height="24.046554128793346" as="geometry">
             <mxPoint x="610" y="30" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="VKu6VAgroe6weIauCGJJ-22" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="VKu6VAgroe6weIauCGJJ-7" target="QrdkW7T1nTLagJ9Bv4TJ-5">
+        <mxCell id="al00elQ1HUkdTze3iGZz-3" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="520" y="509.99507619714177" width="407" height="235.98030998126114" as="geometry" />
+        </mxCell>
+        <mxCell id="QrdkW7T1nTLagJ9Bv4TJ-5" value="SlaveDevice" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="al00elQ1HUkdTze3iGZz-3" vertex="1">
+          <mxGeometry y="5.46492380285823" width="380" height="210.5153861784029" as="geometry" />
+        </mxCell>
+        <mxCell id="QrdkW7T1nTLagJ9Bv4TJ-6" value="- address: uint16_t" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="QrdkW7T1nTLagJ9Bv4TJ-5" vertex="1">
+          <mxGeometry y="26" width="380" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="al00elQ1HUkdTze3iGZz-1" value="- retries: uint8_t" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="QrdkW7T1nTLagJ9Bv4TJ-5" vertex="1">
+          <mxGeometry y="46" width="380" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="QrdkW7T1nTLagJ9Bv4TJ-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="QrdkW7T1nTLagJ9Bv4TJ-5" vertex="1">
+          <mxGeometry y="66" width="380" height="4.515386178402908" as="geometry" />
+        </mxCell>
+        <mxCell id="al00elQ1HUkdTze3iGZz-2" value="+ SlaveDevice(address: uint16_t, retries: uint8_t)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="QrdkW7T1nTLagJ9Bv4TJ-5" vertex="1">
+          <mxGeometry y="70.5153861784029" width="380" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VKu6VAgroe6weIauCGJJ-5" value="+ writeHolding(reg uint16_t, data: T): ModbusError" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="QrdkW7T1nTLagJ9Bv4TJ-5" vertex="1">
+          <mxGeometry y="90.5153861784029" width="380" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VKu6VAgroe6weIauCGJJ-4" value="+ readHolding(reg&amp;nbsp;: uint16_t): SlaveReturn&amp;lt;T&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="QrdkW7T1nTLagJ9Bv4TJ-5" vertex="1">
+          <mxGeometry y="110.5153861784029" width="380" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VKu6VAgroe6weIauCGJJ-1" value="+ readCoil(register: uint16_t): SlaveReturn&amp;lt;T&amp;gt;" style="text;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="QrdkW7T1nTLagJ9Bv4TJ-5" vertex="1">
+          <mxGeometry y="130.5153861784029" width="380" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VKu6VAgroe6weIauCGJJ-2" value="+ writeCoil(register: uint16_t, data: T): ModbusError" style="text;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="QrdkW7T1nTLagJ9Bv4TJ-5" vertex="1">
+          <mxGeometry y="150.5153861784029" width="380" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VKu6VAgroe6weIauCGJJ-6" value="+ readInput(register: uint16_t): SlaveReturn&amp;lt;T&amp;gt;" style="text;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="QrdkW7T1nTLagJ9Bv4TJ-5" vertex="1">
+          <mxGeometry y="170.5153861784029" width="380" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VKu6VAgroe6weIauCGJJ-3" value="+ readDiscreteInput(register: uint16_t): SlaveReturn" style="text;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="QrdkW7T1nTLagJ9Bv4TJ-5" vertex="1">
+          <mxGeometry y="190.5153861784029" width="380" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VKu6VAgroe6weIauCGJJ-21" value="T: ModbusData" style="html=1;align=center;verticalAlign=middle;dashed=1;whiteSpace=wrap;dashPattern=8 8;" parent="al00elQ1HUkdTze3iGZz-3" vertex="1">
+          <mxGeometry x="290" width="117" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="al00elQ1HUkdTze3iGZz-4" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="600" y="320" width="200" height="71.64105761806445" as="geometry" />
+        </mxCell>
+        <mxCell id="VKu6VAgroe6weIauCGJJ-20" value="" style="group" parent="al00elQ1HUkdTze3iGZz-4" vertex="1" connectable="0">
+          <mxGeometry width="200" height="71.64105761806448" as="geometry" />
+        </mxCell>
+        <mxCell id="VKu6VAgroe6weIauCGJJ-7" value="&lt;i&gt;&amp;lt;&amp;lt;struct&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;SlaveReturn&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;container=0;" parent="VKu6VAgroe6weIauCGJJ-20" vertex="1">
+          <mxGeometry y="5.643840098785238" width="127.27272727272727" height="65.99721751927919" as="geometry" />
+        </mxCell>
+        <mxCell id="VKu6VAgroe6weIauCGJJ-8" value="+ error: ModbusError" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VKu6VAgroe6weIauCGJJ-20" vertex="1">
+          <mxGeometry y="31.64384009878529" width="127.27272727272727" height="19.998608759639595" as="geometry" />
+        </mxCell>
+        <mxCell id="VKu6VAgroe6weIauCGJJ-9" value="+ data: T" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="VKu6VAgroe6weIauCGJJ-20" vertex="1">
+          <mxGeometry y="51.642448858424885" width="127.27272727272727" height="19.998608759639595" as="geometry" />
+        </mxCell>
+        <mxCell id="VKu6VAgroe6weIauCGJJ-18" value="T: ModbusData" style="html=1;align=center;verticalAlign=middle;dashed=1;whiteSpace=wrap;dashPattern=8 8;" parent="al00elQ1HUkdTze3iGZz-4" vertex="1">
+          <mxGeometry x="100" width="100" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="al00elQ1HUkdTze3iGZz-5" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" parent="1" source="QrdkW7T1nTLagJ9Bv4TJ-5" target="VPz8lY35UNi245Cyy11Z-7" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="268" y="425" as="sourcePoint" />
+            <mxPoint x="320" y="329" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VKu6VAgroe6weIauCGJJ-22" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" parent="1" source="QrdkW7T1nTLagJ9Bv4TJ-5" target="VKu6VAgroe6weIauCGJJ-7" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="380" y="475" as="sourcePoint" />
             <mxPoint x="530" y="444" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="al00elQ1HUkdTze3iGZz-3" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="520" y="302.99507619714177" width="407" height="235.98030998126114" as="geometry" />
-        </mxCell>
-        <mxCell id="QrdkW7T1nTLagJ9Bv4TJ-5" value="&lt;i&gt;SlaveDevice&lt;/i&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="al00elQ1HUkdTze3iGZz-3">
-          <mxGeometry y="5.46492380285823" width="380" height="230.5153861784029" as="geometry" />
-        </mxCell>
-        <mxCell id="QrdkW7T1nTLagJ9Bv4TJ-6" value="- address: uint8_t" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QrdkW7T1nTLagJ9Bv4TJ-5">
-          <mxGeometry y="26" width="380" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="al00elQ1HUkdTze3iGZz-1" value="- MASTER: DynamicModbusMaster&amp;amp;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QrdkW7T1nTLagJ9Bv4TJ-5">
-          <mxGeometry y="46" width="380" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="QrdkW7T1nTLagJ9Bv4TJ-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="QrdkW7T1nTLagJ9Bv4TJ-5">
-          <mxGeometry y="66" width="380" height="4.515386178402908" as="geometry" />
-        </mxCell>
-        <mxCell id="QrdkW7T1nTLagJ9Bv4TJ-8" value="+ init(): ModbusError" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QrdkW7T1nTLagJ9Bv4TJ-5">
-          <mxGeometry y="70.5153861784029" width="380" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="al00elQ1HUkdTze3iGZz-2" value="# SlaveDevice(address: uint8_t, master: DynamicModbusMaster&amp;amp;)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QrdkW7T1nTLagJ9Bv4TJ-5">
-          <mxGeometry y="90.5153861784029" width="380" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="VKu6VAgroe6weIauCGJJ-1" value="# readCoil(register: uint16_t): SlaveReturn" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QrdkW7T1nTLagJ9Bv4TJ-5">
-          <mxGeometry y="110.5153861784029" width="380" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="VKu6VAgroe6weIauCGJJ-6" value="# readInput(register: uint16_t): SlaveReturn" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QrdkW7T1nTLagJ9Bv4TJ-5">
-          <mxGeometry y="130.5153861784029" width="380" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="VKu6VAgroe6weIauCGJJ-5" value="# writeHolding(register uint16_t, data: T): ModbusError" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QrdkW7T1nTLagJ9Bv4TJ-5">
-          <mxGeometry y="150.5153861784029" width="380" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="VKu6VAgroe6weIauCGJJ-4" value="# readHolding(register: uint16_t): SlaveReturn" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QrdkW7T1nTLagJ9Bv4TJ-5">
-          <mxGeometry y="170.5153861784029" width="380" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="VKu6VAgroe6weIauCGJJ-3" value="# readDiscreteInput(register: uint16_t): SlaveReturn" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QrdkW7T1nTLagJ9Bv4TJ-5">
-          <mxGeometry y="190.5153861784029" width="380" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="VKu6VAgroe6weIauCGJJ-2" value="# writeCoil(register: uint16_t, data: T): ModbusError" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="QrdkW7T1nTLagJ9Bv4TJ-5">
-          <mxGeometry y="210.5153861784029" width="380" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="VKu6VAgroe6weIauCGJJ-21" value="T: ModbusData" style="html=1;align=center;verticalAlign=middle;dashed=1;whiteSpace=wrap;dashPattern=8 8;" vertex="1" parent="al00elQ1HUkdTze3iGZz-3">
-          <mxGeometry x="290" width="117" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="al00elQ1HUkdTze3iGZz-4" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="520" y="631" width="200" height="71.64105761806445" as="geometry" />
-        </mxCell>
-        <mxCell id="VKu6VAgroe6weIauCGJJ-20" value="" style="group" vertex="1" connectable="0" parent="al00elQ1HUkdTze3iGZz-4">
-          <mxGeometry width="200" height="71.64105761806448" as="geometry" />
-        </mxCell>
-        <mxCell id="VKu6VAgroe6weIauCGJJ-7" value="&lt;i&gt;&amp;lt;&amp;lt;struct&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;SlaveReturn&lt;/b&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;container=0;" vertex="1" parent="VKu6VAgroe6weIauCGJJ-20">
-          <mxGeometry y="5.643840098785238" width="127.27272727272727" height="65.99721751927919" as="geometry" />
-        </mxCell>
-        <mxCell id="VKu6VAgroe6weIauCGJJ-8" value="+ error: ModbusError" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VKu6VAgroe6weIauCGJJ-20">
-          <mxGeometry y="31.64384009878529" width="127.27272727272727" height="19.998608759639595" as="geometry" />
-        </mxCell>
-        <mxCell id="VKu6VAgroe6weIauCGJJ-9" value="+ data: T" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="VKu6VAgroe6weIauCGJJ-20">
-          <mxGeometry y="51.642448858424885" width="127.27272727272727" height="19.998608759639595" as="geometry" />
-        </mxCell>
-        <mxCell id="VKu6VAgroe6weIauCGJJ-18" value="T: ModbusData" style="html=1;align=center;verticalAlign=middle;dashed=1;whiteSpace=wrap;dashPattern=8 8;" vertex="1" parent="al00elQ1HUkdTze3iGZz-4">
-          <mxGeometry x="100" width="100" height="19" as="geometry" />
-        </mxCell>
-        <mxCell id="al00elQ1HUkdTze3iGZz-5" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="QrdkW7T1nTLagJ9Bv4TJ-5" target="VPz8lY35UNi245Cyy11Z-7">
+        <mxCell id="9KdG6-5kA1tg0jwv_Few-6" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;" edge="1" parent="1" source="QrdkW7T1nTLagJ9Bv4TJ-5" target="9KdG6-5kA1tg0jwv_Few-1">
           <mxGeometry width="160" relative="1" as="geometry">
-            <mxPoint x="268" y="425" as="sourcePoint" />
-            <mxPoint x="320" y="329" as="targetPoint" />
+            <mxPoint x="850" y="530" as="sourcePoint" />
+            <mxPoint x="1010" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9KdG6-5kA1tg0jwv_Few-9" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="890" y="300" width="397" height="99.01999999999998" as="geometry" />
+        </mxCell>
+        <mxCell id="9KdG6-5kA1tg0jwv_Few-1" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;/span&gt;&lt;br&gt;SlaveDeviceIfc&amp;lt;T&amp;gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="9KdG6-5kA1tg0jwv_Few-9">
+          <mxGeometry y="13.019999999999982" width="353" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="9KdG6-5kA1tg0jwv_Few-4" value="+ writeHolding(reg: uint16_t, data: D&amp;amp;): ModbusError" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9KdG6-5kA1tg0jwv_Few-1">
+          <mxGeometry y="40" width="353" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="9KdG6-5kA1tg0jwv_Few-8" value="+ readHolding(reg&amp;nbsp;: uint16_t): SlaveReturn&amp;lt;D&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9KdG6-5kA1tg0jwv_Few-1">
+          <mxGeometry y="66" width="353" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="9KdG6-5kA1tg0jwv_Few-13" value="+ readCoil(register: uint16_t): SlaveReturn&amp;lt;T&amp;gt;" style="text;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9KdG6-5kA1tg0jwv_Few-1">
+          <mxGeometry y="86" width="353" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="9KdG6-5kA1tg0jwv_Few-16" value="+ readDiscreteInput(register: uint16_t): SlaveReturn" style="text;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9KdG6-5kA1tg0jwv_Few-1">
+          <mxGeometry y="106" width="353" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="9KdG6-5kA1tg0jwv_Few-15" value="+ readInput(register: uint16_t): SlaveReturn&amp;lt;T&amp;gt;" style="text;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9KdG6-5kA1tg0jwv_Few-1">
+          <mxGeometry y="126" width="353" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="9KdG6-5kA1tg0jwv_Few-14" value="+ writeCoil(register: uint16_t, data: T): ModbusError" style="text;strokeColor=#d79b00;fillColor=#ffe6cc;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="9KdG6-5kA1tg0jwv_Few-1">
+          <mxGeometry y="146" width="353" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="9KdG6-5kA1tg0jwv_Few-5" value="T: DerivedClass&lt;br&gt;D: ModbusData" style="html=1;align=center;verticalAlign=middle;dashed=1;whiteSpace=wrap;dashPattern=8 8;" vertex="1" parent="9KdG6-5kA1tg0jwv_Few-9">
+          <mxGeometry x="280" width="117" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="9KdG6-5kA1tg0jwv_Few-10" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="9KdG6-5kA1tg0jwv_Few-1" target="VKu6VAgroe6weIauCGJJ-7">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="910" y="569" as="sourcePoint" />
+            <mxPoint x="1030" y="529" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9KdG6-5kA1tg0jwv_Few-11" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="9KdG6-5kA1tg0jwv_Few-1" target="VPz8lY35UNi245Cyy11Z-14">
+          <mxGeometry x="-0.159" y="-4" width="160" relative="1" as="geometry">
+            <mxPoint x="633" y="525" as="sourcePoint" />
+            <mxPoint x="470" y="328" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="680" y="240" />
+            </Array>
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
