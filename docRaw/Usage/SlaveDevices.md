@@ -71,7 +71,7 @@ The above-described mechanism works for all datatypes that can be represented in
 Therefore, it is also possible to bulk-read a group of registers using a custom datatype:
 
 ```c++
-class MyDevice : public dynamic_modbus_master::slave::SlaveDevice{
+class MyDevice : public dynamic_modbus_master::slave::SlaveDevice {
     public:
     MyDevice(uint16_t address, uint8_t retries): SlaveDevice(address, retries) {}
     virtual ~MyDevice = default;
@@ -119,7 +119,59 @@ to read the registers only when they are needed.
 
 ## Coil Registers
 
-@todo Implement reading/writing of Coil Registers and write documentation
+The mechanisms described for reading and writing Holding Registers work for Coil Registers as well with one exception:
+ ***You cannot attempt to read a single boolean Value from multiple Coil Registers!***
+
+So `SlaveReturn<bool> readCoil = SlaveDevice(1,1).readCoils<bool>(1,1);` would work correctly and `SlaveReturn.data`
+would contain a correct value, however attempting `SlaveReturn<bool> readCoil = SlaveDevice(1,1).readCoils<bool>(1,2);`
+would not work correctly and `SlaveReturn.error` would contain a `ModbusError::INVALID_ARG` since a read of
+multiple Coil Registers into a single Boolean was attempted. The same goes for writing Coil Registers.
+
+An example device reading coils could look like this:
+
+```c++
+class MyDevice : public dynamic_modbus_master::slave::SlaveDevice {
+    MyDevice(uint16_t address, uint8_t retries): SlaveDevice(address, retries) {}
+    virtual ~MyDevice() = default;
+    
+    bool readSingleValue() {
+        dynamic_modbus_master::slave::SlaveReturn<bool> readReturn = readCoils<bool>(0,1);
+        if (readReturn.error != dynamic_modbus_master::ModbusError::OK) {
+            return false;
+        } 
+        return readReturn.data;
+    }
+    
+    std::array<bool, 16> readMultipleValues() {
+        dynamic_modbus_master::slave::SlaveReturn<uint16_t> readReturn = readCoils<uint16_t>(1,16);
+        if (readReturn.error != dynamic_modbus_master::ModbusError::OK) {
+            return {false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false};
+        }
+        std::array<bool, 16> returnData;
+        for(size_t i = 0; i < 16; i++) {
+            returnData[i] == readReturn.data & (1 << i);
+        }
+        return returnData;
+    }
+};
+```
+
+And a device that writes Coils could look like this:
+
+```c++
+class MyDevice : public dynamic_modbus_master::slave::SlaveDevice {
+    MyDevice(uint16_t address, uint8_t retries): SlaveDevice(address, retries) {}
+    virtual ~MyDevice() = default;
+    
+    void writeSingleValue(bool state) {
+        writeCoils(0, state, 1);
+    }
+    
+    void writeMultipleValues(uint16_t states) {
+        writeCoils(1, states, 16);
+    }
+};
+```
 
 ## Input Registers
 
