@@ -2,7 +2,7 @@
 
 Proper Implementation of slave devices is crucial to operating properly
 
-@note All code samples in this file are for the inheritance-based implementation but the general idea works for both approaches.
+@note All code samples in this file assume the inheritance-based implementation but the general idea works for both approaches.
 
 ## Holding Registers
 
@@ -181,7 +181,7 @@ class MyDevice : public dynamic_modbus_master::slave::SlaveDevice {
 
 For certain use cases the above API might not be sufficient, it is however possible to achieve similar functionality
 by implementing the dynamic_modbus_master::slave::SlaveDeviceIfc Interface. As long as this interface is
-implemented into a custom class, usage of Slave Devices should be the same from an application perspective.
+implemented by a custom class, usage of Slave Devices should be the same from an application perspective.
 
 For an example on how to implement this interface see dynamic_modbus_master::slave::SlaveDevice.
 

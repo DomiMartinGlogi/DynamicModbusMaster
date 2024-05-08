@@ -23,7 +23,7 @@
 
 #include <SlaveDevice.h>
 
-class SingleSlaveExampleDevice : public dynamic_modbus_master::slave::SlaveDevice{
+class SingleSlaveExampleDevice : private dynamic_modbus_master::slave::SlaveDevice{
 public:
     SingleSlaveExampleDevice(uint8_t address, uint8_t retries);
     
