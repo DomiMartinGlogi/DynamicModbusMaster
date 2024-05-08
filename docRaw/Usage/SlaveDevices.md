@@ -13,7 +13,7 @@ Reading a holding register can be done using the `dynamic_modbus_master::slave::
 The simplest implementation can look like this:
 
 ```c++
-class MyDevice : public dynamic_modbus_master::slave::SlaveDevice{
+class MyDevice : private dynamic_modbus_master::slave::SlaveDevice{
     public:
     MyDevice(uint16_t address, uint8_t retries): SlaveDevice(address, retries) {}
     virtual ~MyDevice = default;
@@ -27,7 +27,7 @@ class MyDevice : public dynamic_modbus_master::slave::SlaveDevice{
 However the above implementation doesn't handle errors in an appropriate manner so it can be extended to be:
 
 ```c++
-class MyDevice : public dynamic_modbus_master::slave::SlaveDevice{
+class MyDevice : private dynamic_modbus_master::slave::SlaveDevice{
     public:
     MyDevice(uint16_t address, uint8_t retries): SlaveDevice(address, retries) {}
     virtual ~MyDevice = default;
@@ -46,7 +46,7 @@ class MyDevice : public dynamic_modbus_master::slave::SlaveDevice{
 In cases where values are in a different byte order or have a different endian-ness this can also be adjusted here.
 
 ```c++
-class MyDevice : public dynamic_modbus_master::slave::SlaveDevice{
+class MyDevice : private dynamic_modbus_master::slave::SlaveDevice{
     public:
     MyDevice(uint16_t address, uint8_t retries): SlaveDevice(address, retries) {}
     virtual ~MyDevice = default;
@@ -71,7 +71,7 @@ The above-described mechanism works for all datatypes that can be represented in
 Therefore, it is also possible to bulk-read a group of registers using a custom datatype:
 
 ```c++
-class MyDevice : public dynamic_modbus_master::slave::SlaveDevice {
+class MyDevice : private dynamic_modbus_master::slave::SlaveDevice {
     public:
     MyDevice(uint16_t address, uint8_t retries): SlaveDevice(address, retries) {}
     virtual ~MyDevice = default;
@@ -175,7 +175,9 @@ class MyDevice : public dynamic_modbus_master::slave::SlaveDevice {
 
 ## Input Registers
 
-@todo Implement reading of Input Registers and write documentation
+Usage of the Input Registers follows the same pattern as the Coil and Holding Registers, with the caveat that
+they are ***READ-ONLY***, there are no functions that would allow the user to write to an Input Register since
+the underlying registers cannot be written to in the first place.
 
 ## Advanced Uses
 

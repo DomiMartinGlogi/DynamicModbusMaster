@@ -5,7 +5,7 @@
 - esp-modbus
 - ESP-IDF Version 5.0, preferably higher
 
-You can include this library by using `idf.py domimartinglogi/dynamic_modbus_master`.
+You can include this library by using `idf.py add-dependency domimartinglogi/dynamic_modbus_master`.
 
 ## Setting Up the Modbus
 
@@ -72,7 +72,41 @@ class MyDevice {
 
 ### Accessing Registers
 
-To access a register, the implemented `MyDevice` can simply call the appropriate method (see `dynamic_modbus_master::slave::SlaveDevice`).
+To access a register, the implemented `MyDevice` can simply call the appropriate method (see `dynamic_modbus_master::slave::SlaveDevice`):
+
+- **Holding Registers Read/Write:**
+
+  - **`writeHolding ` Method:** This method writes data to the holding registers of the Modbus slave device.
+    It can take care of different data sizes and adjusts the Modbus Function Code usage accordingly.
+    If the data fits within one register, the function code 0x06 is used. If the data spans across multiple registers,
+    the function code 0x10 is used.
+
+  - **`readHolding` Method:** This method reads data from the holding registers of the slave device.
+    The reading function, which uses the Modbus function code `0x03`, is designed to extract the full contents of the
+    number of registers equivalent to the size of the requested data type.
+
+- **Coils Read/Write:**
+
+  - **`writeCoils` Method:** This method writes data to the coils of the Modbus slave device, corresponding to a specified
+    register address. This method uses either Modbus function code 0x05 (for single boolean data) or 0x0F (for
+    boolean arrays or non-boolean data spanning across multiple coils).
+
+  - **`readCoils` Method:** This method reads data from the coils of the Modbus slave device. If a single boolean value
+    is requested, the function uses Modbus function code 0x01 to read the single bit. If non-boolean or multiple values
+    are requested, the function reads the amount of coils corresponding to the desired data size.
+
+- **Inputs Read:**
+
+  - **`readInputs` Method:** This method reads data from the input registers of the Modbus slave device.
+    Each call reads the number of registers corresponding to the size of the requested data type.
+
+  - **`readDiscreteInputs` Method:** This method reads data from the discrete inputs (single bits) of the Modbus slave device.
+    If single boolean value is requested, it reads a single bit. If non-boolean or multiple values are requested,
+    it reads enough bits to satisfy the requested data size.
+
+Each of these functions, which ensures type-safety by employing template methods that use the `ModbusData` concept,
+returns a representative status object following the Modbus request. This object contains the status of the request (`ModbusError`)
+and read data (in case of read operations).
 
 For further info see [here](@ref dmm_slaves)
 
