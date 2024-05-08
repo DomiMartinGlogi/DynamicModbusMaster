@@ -22,16 +22,16 @@ When this example works correctly it should:
 
 | Number            | Interpreted Type |
 |:------------------|-----------------:|
-| Holding Registers |
+| Holding Registers |                  |
 | 1                 |       `uint16_t` |
 | 2 - 3             |       `uint32_t` |
 | 4 - 5             |          `float` |
-| Coils             |
+| Coils             |                  |
 | 0                 |           `bool` |
 | 1 - 16            |       `uint16_t` |
-| Discrete Inputs   |
+| Discrete Inputs   |                  |
 | 0                 |           `bool` |
-| Inputs            |
+| Inputs            |                  |
 | 0                 |       `uint16_t` |
 
 ## Compatible Devices
