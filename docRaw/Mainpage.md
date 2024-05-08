@@ -17,4 +17,4 @@ To learn how to use this library see the [Getting Started](@ref dmm_getStart) se
 | Modbus TCP                              | Planned |                  |
 | Handling Read/Write Holding Registers   | Done    | `v0.0.1`         |
 | Handling Read/Write Coil Registers      | Done    | `v0.2.0`         |
-| Handling Reading Input Registers        | Planned |                  |
+| Handling Reading Input Registers        | ^       | ^                |
