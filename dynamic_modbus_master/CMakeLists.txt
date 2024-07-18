@@ -10,6 +10,8 @@ idf_component_register(
         "SlaveDevice.cpp"
         INCLUDE_DIRS
         "include"
+        REQUIRES
+        espressif__esp-modbus
 )
 
 project(dynamic_modbus_master)
