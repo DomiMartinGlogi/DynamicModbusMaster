@@ -44,7 +44,7 @@ ModbusError DynamicModbusMaster::initialise(ModbusConfig config) {
         } else if (error == ESP_ERR_INVALID_STATE) {
             return ModbusError::INVALID_STATE;
         } else {
-            return ModbusError::FAILURE_OR_EXCEPTION;
+            return ModbusError::FAILURE;
         }
     }
     
@@ -64,7 +64,7 @@ ModbusError DynamicModbusMaster::initialise(ModbusConfig config) {
     error = uart_set_pin(m_config.uartPort, m_config.txdPin, m_config.rxdPin, m_config.rtsPin, UART_PIN_NO_CHANGE);
     if (error != ESP_OK) {
         ESP_LOGE(TAG, "An error occurred while setting the UART pins: %s", esp_err_to_name(error));
-        return ModbusError::FAILURE_OR_EXCEPTION;
+        return ModbusError::FAILURE;
     }
     
     return ModbusError::OK;

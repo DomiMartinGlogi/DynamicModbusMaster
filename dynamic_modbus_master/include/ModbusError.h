@@ -36,7 +36,19 @@ enum class ModbusError : uint8_t {
     PORT_NOT_SUPPORTED = 5,     //!< This Port is not supported
     INVALID_STATE = 6,          //!< The Modbus Driver or the Device is in an invalid state
     TIMEOUT = 7,                //!< The Driver experienced a timeout
-    FAILURE_OR_EXCEPTION = 8    //!< The slave device experienced a failure or exception, esp-modbus does not distinguish between the two and does not allow determining what occured.
+    FAILURE = 8,                //!< The slave device experienced an undermined failure.
+    // General Exception Codes
+    ILLEGAL_FUNCTION = 11,      //!< The received Function code is not available on the target device
+    ILLEGAL_DATA_ADDRESS = 12,  //!< The Data Address received is not available
+    ILLEGAL_DATA_VALUE = 13,    //!< The Data Value received is of an invalid length
+    SLAVE_DEVICE_FAILURE = 14,  //!< An Unrecoverable Error occured while trying to perform the request
+    ACKNOWLEDGE = 15,           //!< The Target accepted the Request but will take some time to complete it, this is returned to prevent a Timeout for complex requests
+    SLAVE_DEVICE_BUSY = 16,     //!< The Target is currently busy executing a command, retransmit the command at a later time
+    MEMORY_PARITY_ERROR = 18,   //!< The Extended File Area failed to pass a consistency check
+
+    //
+    GATEWAY_PATH_UNAVAILABLE = 20,      //!< No Path was found between the Input and the Output Port of the Gateway, gateway is possibly misconfigured or overloaded
+    GATEWAY_TARGET_NO_RESPONSE = 21,    //!< Gateway Target Device did not respond or does not exist.
 };
 }
 
