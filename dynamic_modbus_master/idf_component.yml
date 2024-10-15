@@ -1,4 +1,4 @@
-version: "0.2.1"
+version: "0.3.0"
 description: "A simple more capable way of managing access to modbus devices built atop of esp-modbus."
 url: https://github.com/DomiMartinGlogi/DynamicModbusMaster
 license: "MIT"

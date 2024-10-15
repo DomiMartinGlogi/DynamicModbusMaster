@@ -63,8 +63,35 @@ public:
             case ModbusError::TIMEOUT:
                 return "TIMEOUT";
                 break;
-            case ModbusError::FAILURE_OR_EXCEPTION:
-                return "FAILURE_OR_EXCEPTION";
+            case ModbusError::FAILURE:
+                return "FAILURE";
+                break;
+            case ModbusError::ILLEGAL_FUNCTION:
+                return "ILLEGAL FUNCTION";
+                break;
+            case ModbusError::ILLEGAL_DATA_ADDRESS:
+                return "ILLEGAL DATA ADDRESS";
+                break;
+            case ModbusError::ILLEGAL_DATA_VALUE:
+                return "ILLEGAL DATA VALUE";
+                break;
+            case ModbusError::SLAVE_DEVICE_FAILURE:
+                return "SLAVE DEVICE FAILURE";
+                break;
+            case ModbusError::ACKNOWLEDGE:
+                return "ACKNOWLEDGE";
+                break;
+            case ModbusError::SLAVE_DEVICE_BUSY:
+                return "SLAVE DEVICE BUSY";
+                break;
+            case ModbusError::MEMORY_PARITY_ERROR:
+                return "MEMORY PARITY ERROR";
+                break;
+            case ModbusError::GATEWAY_PATH_UNAVAILABLE:
+                return "GATEWAY PATH UNAVAILABLE";
+                break;
+            case ModbusError::GATEWAY_TARGET_NO_RESPONSE:
+                return "GATEWAY TARGET NO RESPONSE";
                 break;
         }
         return "Invalid Error";

@@ -179,6 +179,11 @@ Usage of the Input Registers follows the same pattern as the Coil and Holding Re
 they are ***READ-ONLY***, there are no functions that would allow the user to write to an Input Register since
 the underlying registers cannot be written to in the first place.
 
+## Exceptions
+
+If the device's response indicates an Exception the driver automatically attempts to identify which one occurred and returns the corresponding
+dynamic_modbus_master::ModbusError which can then be handled appropriately by the user.
+
 ## Advanced Uses
 
 For certain use cases the above API might not be sufficient, it is however possible to achieve similar functionality
