@@ -40,13 +40,15 @@ ModbusError SlaveDevice::sendRequest(mb_param_request_t request, void *data) con
                 return ModbusError::OK;
             case ESP_ERR_INVALID_ARG:
                 return ModbusError::INVALID_ARG;
-            case ESP_ERR_INVALID_RESPONSE:
-                return ModbusError::INVALID_RESPONSE;
             case ESP_ERR_NOT_SUPPORTED:
                 return ModbusError::SLAVE_NOT_SUPPORTED;
+            case ESP_ERR_INVALID_RESPONSE:
             case ESP_FAIL:
                 mb_trans_info_t info;
                 mbc_master_get_transaction_info(&info);
+                if (info.exception == 0) {
+                    return ModbusError::INVALID_RESPONSE;
+                }
                 return static_cast<ModbusError>(info.exception + 10);
             default:
                 return ModbusError::FAILURE;

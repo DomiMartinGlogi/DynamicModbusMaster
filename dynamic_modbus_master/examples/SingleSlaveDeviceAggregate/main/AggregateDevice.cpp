@@ -30,6 +30,7 @@ uint16_t AggregateDevice::readExampleSingleRegister() {
     if (slaveReturn.error == dynamic_modbus_master::ModbusError::OK) {
         return slaveReturn.data;
     } else {
+        ESP_LOGE("Single Slave Example Device", "Error Occured : %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(slaveReturn.error).c_str());
         return -1;
     }
 }
@@ -39,6 +40,7 @@ uint32_t AggregateDevice::readExampleMultipleRegisters() {
     if (slaveReturn.error == dynamic_modbus_master::ModbusError::OK) {
         return slaveReturn.data;
     } else {
+        ESP_LOGE("Single Slave Example Device", "Error Occured : %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(slaveReturn.error).c_str());
         return -1;
     }
 }
@@ -48,6 +50,7 @@ float AggregateDevice::readExampleFloat() {
     if (slaveReturn.error == dynamic_modbus_master::ModbusError::OK) {
         return slaveReturn.data;
     } else {
+        ESP_LOGE("Single Slave Example Device", "Error Occured : %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(slaveReturn.error).c_str());
         return -1;
     }
 }
