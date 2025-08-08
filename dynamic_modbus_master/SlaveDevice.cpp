@@ -32,7 +32,7 @@ ModbusError SlaveDevice::sendRequest(mb_param_request_t request, void *data) con
             break;
         }
     } while(attempts <= m_retries);
-    if (attempts > m_retries) {
+    if ((attempts > m_retries && m_retries > 0) || error == ESP_ERR_TIMEOUT) {
         return ModbusError::TIMEOUT;
     } else {
         switch (error) {
