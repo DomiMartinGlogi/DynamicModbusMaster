@@ -77,24 +77,24 @@ void SingleSlaveExampleDevice::writeExampleFloat(float data) {
 }
 
 uint16_t SingleSlaveExampleDevice::readExampleMultipleCoils() {
-    dynamic_modbus_master::slave::SlaveReturn<uint16_t> slaveReturn = readCoils<uint16_t>(1, 16);
+    dynamic_modbus_master::slave::SlaveReturn<uint16_t> slaveReturn = readCoils<uint16_t>(1, 4);
     if (slaveReturn.error != dynamic_modbus_master::ModbusError::OK) {
-        ESP_LOGE("SingleSlaveExampleDevice", "Failed to read Coils %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(slaveReturn.error).c_str());
+        ESP_LOGE("SingleSlaveExampleDevice", "Failed to read multiple Coils %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(slaveReturn.error).c_str());
     }
     return slaveReturn.data;
 }
 
 void SingleSlaveExampleDevice::writeExampleMultipleCoils(uint16_t coilStates) {
-    dynamic_modbus_master::ModbusError error = writeCoils(1, coilStates, 16);
+    dynamic_modbus_master::ModbusError error = writeCoils(1, coilStates, 4);
     if (error != dynamic_modbus_master::ModbusError::OK) {
-        ESP_LOGE("SingleSlaveExampleDevice", "Failed to write Coil %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(error).c_str());
+        ESP_LOGE("SingleSlaveExampleDevice", "Failed to write multiple Coils %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(error).c_str());
     }
 }
 
 bool SingleSlaveExampleDevice::readExampleSingleCoil() {
     dynamic_modbus_master::slave::SlaveReturn<bool> slaveReturn = readCoils<bool>(0, 1);
     if (slaveReturn.error != dynamic_modbus_master::ModbusError::OK) {
-        ESP_LOGE("SingleSlaveExampleDevice", "Failed to read Coil %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(slaveReturn.error).c_str());
+        ESP_LOGE("SingleSlaveExampleDevice", "Failed to read single Coil %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(slaveReturn.error).c_str());
     }
     return slaveReturn.data;
 }
@@ -102,7 +102,7 @@ bool SingleSlaveExampleDevice::readExampleSingleCoil() {
 void SingleSlaveExampleDevice::writeExampleSingleCoil(bool state) {
     dynamic_modbus_master::ModbusError error = writeCoils(0, state, 1);
     if (error != dynamic_modbus_master::ModbusError::OK) {
-        ESP_LOGE("SingleSlaveExampleDevice", "Failed to write Coil %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(error).c_str());
+        ESP_LOGE("SingleSlaveExampleDevice", "Failed to write single Coil %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(error).c_str());
     }
 }
 
