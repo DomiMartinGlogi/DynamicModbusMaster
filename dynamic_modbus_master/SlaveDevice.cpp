@@ -50,7 +50,7 @@ ModbusError SlaveDevice::sendRequest(mb_param_request_t request, void *data) con
     }
 }
 
-SlaveDevice::SlaveDevice(uint8_t address, uint8_t retries, const DynamicModbusMaster & master): m_address(address), m_retries(retries), m_master(master) {
+SlaveDevice::SlaveDevice(uint8_t address, uint8_t retries, const DynamicModbusMaster& master): m_address(address), m_retries(retries), m_master(master) {
 }
 
 }

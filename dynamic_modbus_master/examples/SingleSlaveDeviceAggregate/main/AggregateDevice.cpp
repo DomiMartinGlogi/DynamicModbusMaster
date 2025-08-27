@@ -21,7 +21,7 @@
 #include "AggregateDevice.h"
 #include <ModbusErrorHelper.h>
 
-AggregateDevice::AggregateDevice(uint8_t address, uint8_t retries, const dynamic_modbus_master::DynamicModbusMaster & master):
+AggregateDevice::AggregateDevice(uint8_t address, uint8_t retries, const dynamic_modbus_master::DynamicModbusMaster& master):
         m_device(address, retries, master) {
 }
 

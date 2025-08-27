@@ -25,7 +25,7 @@
 
 class SingleSlaveExampleDevice : private dynamic_modbus_master::slave::SlaveDevice{
 public:
-    SingleSlaveExampleDevice(uint8_t address, uint8_t retries, const dynamic_modbus_master::DynamicModbusMaster & master);
+    SingleSlaveExampleDevice(uint8_t address, uint8_t retries, const dynamic_modbus_master::DynamicModbusMaster& master);
     
     uint16_t readExampleSingleRegister();
     
