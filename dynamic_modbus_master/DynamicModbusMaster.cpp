@@ -25,6 +25,18 @@
 
 namespace dynamic_modbus_master {
 
+DynamicModbusMaster::~DynamicModbusMaster() {
+    // Check if the ModbusMaster was ever intialised.
+    if (!m_context) {
+        return;
+    }
+    esp_err_t error = mbc_master_delete(m_context);
+    if (error != ESP_OK) {
+        ESP_LOGE(TAG, "An error occured while trying to destroy the modbus communication stack %s",
+                 esp_err_to_name(error));
+    }
+}
+
 ModbusError DynamicModbusMaster::initialise(ModbusConfig config) {
     m_config = config;   
     mb_communication_info_t commInfo = {};
@@ -75,7 +87,7 @@ ModbusError DynamicModbusMaster::start() {
 ModbusError DynamicModbusMaster::stop() {
     esp_err_t error = mbc_master_stop(m_context);
     if (error != ESP_OK) {
-        ESP_LOGE(TAG, "An error occured while trying to stop and destroy the modbus communication stack %s",
+        ESP_LOGE(TAG, "An error occured while trying to stop the modbus communication stack %s",
                  esp_err_to_name(error));
         return ModbusError::INVALID_STATE;
     }
