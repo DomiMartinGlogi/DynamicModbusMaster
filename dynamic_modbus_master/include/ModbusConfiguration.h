@@ -43,8 +43,8 @@ struct ModbusConfig {
     uint8_t txdPin;
     uint8_t rtsPin;
     uint32_t baudRate;
-    mb_mode_type_t modbusMode;
-    };
+    mb_comm_mode_t modbusMode;
+};
 }
 
 #endif //DYNAMIC_MODBUS_MASTER_MODBUSCONFIGURATION_H

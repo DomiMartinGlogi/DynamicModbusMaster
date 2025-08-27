@@ -27,7 +27,7 @@ ModbusError SlaveDevice::sendRequest(mb_param_request_t request, void *data) con
     esp_err_t error;
     do {
         attempts++;
-        error = mbc_master_send_request(&request, data);
+        error = mbc_master_send_request(m_master.getContext(), &request, data);
         if (error != ESP_ERR_TIMEOUT) {
             break;
         }
@@ -43,20 +43,14 @@ ModbusError SlaveDevice::sendRequest(mb_param_request_t request, void *data) con
             case ESP_ERR_NOT_SUPPORTED:
                 return ModbusError::SLAVE_NOT_SUPPORTED;
             case ESP_ERR_INVALID_RESPONSE:
-            case ESP_FAIL:
-                mb_trans_info_t info;
-                mbc_master_get_transaction_info(&info);
-                if (info.exception == 0) {
-                    return ModbusError::INVALID_RESPONSE;
-                }
-                return static_cast<ModbusError>(info.exception + 10);
+                return ModbusError::INVALID_RESPONSE;
             default:
                 return ModbusError::FAILURE;
         }
     }
 }
 
-SlaveDevice::SlaveDevice(uint8_t address, uint8_t retries): m_address(address), m_retries(retries) {
+SlaveDevice::SlaveDevice(uint8_t address, uint8_t retries, const DynamicModbusMaster & master): m_address(address), m_retries(retries), m_master(master) {
 }
 
 }

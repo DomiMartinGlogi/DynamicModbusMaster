@@ -22,6 +22,7 @@
 #define DYNAMIC_MODBUS_MASTER_SLAVEDEVICE_H
 #include "ModbusData.hpp"
 #include <ModbusError.h>
+#include <DynamicModbusMaster.h>
 #include <esp_modbus_master.h>
 #include <SlaveDeviceIfc.h>
 
@@ -43,7 +44,7 @@ public:
      *
      * @details This class provides functionality to initialize and communicate with a slave device using the Modbus protocol.
      */
-    SlaveDevice(uint8_t address, uint8_t retries);
+    SlaveDevice(uint8_t address, uint8_t retries, const DynamicModbusMaster & master);
     
     ~SlaveDevice() override = default;
     
@@ -241,6 +242,7 @@ public:
 private:
     uint8_t m_address;
     uint8_t m_retries;
+    const DynamicModbusMaster & m_master;
     
     /**
      * @brief Helper function to send a modbus request

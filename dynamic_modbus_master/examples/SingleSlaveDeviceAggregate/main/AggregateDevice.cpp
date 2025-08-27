@@ -21,8 +21,8 @@
 #include "AggregateDevice.h"
 #include <ModbusErrorHelper.h>
 
-AggregateDevice::AggregateDevice(uint8_t address, uint8_t retries):
-        m_device(address, retries) {
+AggregateDevice::AggregateDevice(uint8_t address, uint8_t retries, const dynamic_modbus_master::DynamicModbusMaster & master):
+        m_device(address, retries, master) {
 }
 
 uint16_t AggregateDevice::readExampleSingleRegister() {
@@ -106,7 +106,7 @@ void AggregateDevice::writeExampleMultipleCoils(uint16_t coilStates) {
     }
 }
 
-bool SingleSlaveExampleDevice::readDiscreteInput() {
+bool AggregateDevice::readDiscreteInput() {
     dynamic_modbus_master::slave::SlaveReturn<bool> slaveReturn = m_device.readDiscreteInputs<bool>(0);
     if (slaveReturn.error != dynamic_modbus_master::ModbusError::OK) {
         ESP_LOGE("SingleSlaveExampleDevice", "Failed to read Discrete Input %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(slaveReturn.error).c_str());
@@ -114,7 +114,7 @@ bool SingleSlaveExampleDevice::readDiscreteInput() {
     return slaveReturn.data;
 }
 
-uint16_t SingleSlaveExampleDevice::readInput() {
+uint16_t AggregateDevice::readInput() {
     dynamic_modbus_master::slave::SlaveReturn<uint16_t> slaveReturn = m_device.readInputs<uint16_t>(0);
     if (slaveReturn.error != dynamic_modbus_master::ModbusError::OK) {
         ESP_LOGE("SingleSlaveExampleDevice", "Failed to read Input %s", dynamic_modbus_master::ModbusErrorHelper::modbusErrorToName(slaveReturn.error).c_str());

@@ -36,7 +36,7 @@ enum class ModbusError : uint8_t {
     PORT_NOT_SUPPORTED = 5,     //!< This Port is not supported
     INVALID_STATE = 6,          //!< The Modbus Driver or the Device is in an invalid state
     TIMEOUT = 7,                //!< The Driver experienced a timeout
-    FAILURE = 8,                //!< The slave device experienced an undermined failure.
+    FAILURE = 8,                //!< The slave device experienced an undetermined failure.
     // General Exception Codes
     ILLEGAL_FUNCTION = 11,      //!< The received Function code is not available on the target device
     ILLEGAL_DATA_ADDRESS = 12,  //!< The Data Address received is not available

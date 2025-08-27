@@ -88,9 +88,18 @@ public:
      */
     ModbusError stop();
     
+    /**
+     * @brief Get the context object to the Modbus communication stack. Allows to create multiple instances of masters.
+     * 
+     * @note Creating multiple instances was a feature introduced in esp modbus version 2.0, previous version allowed only for one global master to exist even with different protocols.
+     * 
+     * @return Non owning pointer to the context handle, that allows to refer to the initally created Modbus communication stack.
+     */
+    void* getContext() const;
+
 private:
     ModbusConfig m_config;
-    void* m_handle;
+    void* m_context;
 };
 }
 

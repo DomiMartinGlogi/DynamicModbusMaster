@@ -14,13 +14,13 @@ dynamic_modbus_master::ModbusConfig config {
         .rtsPin = CONFIG_MB_UART_RTS,
         .baudRate = CONFIG_MB_UART_BAUD_RATE,
         #ifdef CONFIG_MB_COMM_MODE_RTU
-        .modbusMode = MB_MODE_RTU,
+        .modbusMode = MB_RTU,
         #elif CONFIG_MB_COMM_MODE_ASCII
-        .modbusMode = MB_MODE_ASCII
+        .modbusMode = MB_ASCII
         #endif
 };
 
-AggregateDevice g_exampleDevice(1, 1);
+AggregateDevice g_exampleDevice(1, 1, master);
 
 extern "C" void app_main(void) {
     dynamic_modbus_master::ModbusError error = master.initialise(config);
