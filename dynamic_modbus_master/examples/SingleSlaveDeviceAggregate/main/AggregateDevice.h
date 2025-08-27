@@ -25,7 +25,7 @@
 
 class AggregateDevice{
 public:
-    AggregateDevice(uint8_t address, uint8_t retries);
+    AggregateDevice(uint8_t address, uint8_t retries, const dynamic_modbus_master::DynamicModbusMaster& master);
     
     uint16_t readExampleSingleRegister();
     

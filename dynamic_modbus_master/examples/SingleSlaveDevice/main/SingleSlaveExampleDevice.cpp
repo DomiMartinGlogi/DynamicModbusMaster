@@ -21,7 +21,7 @@
 #include "SingleSlaveExampleDevice.h"
 #include <ModbusErrorHelper.h>
 
-SingleSlaveExampleDevice::SingleSlaveExampleDevice(uint8_t address, uint8_t retries) : SlaveDevice(address, retries){
+SingleSlaveExampleDevice::SingleSlaveExampleDevice(uint8_t address, uint8_t retries, const dynamic_modbus_master::DynamicModbusMaster& master) : SlaveDevice(address, retries, master){
 
 }
 

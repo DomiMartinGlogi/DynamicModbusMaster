@@ -25,20 +25,31 @@
 
 namespace dynamic_modbus_master {
 
-consteval mb_communication_info_t defaultCommInfo() {
-    return {
-            .mode = MB_MODE_RTU,
-            .slave_addr = 0,
-            .parity = UART_PARITY_DISABLE,
-            .dummy_port = 0
-    };
+DynamicModbusMaster::~DynamicModbusMaster() {
+    // Check if the ModbusMaster was ever intialised.
+    if (!m_context) {
+        return;
+    }
+    esp_err_t error = mbc_master_delete(m_context);
+    if (error != ESP_OK) {
+        ESP_LOGE(TAG, "An error occured while trying to destroy the modbus communication stack %s",
+                 esp_err_to_name(error));
+    }
 }
 
 ModbusError DynamicModbusMaster::initialise(ModbusConfig config) {
-    m_config = config;
-    esp_err_t error = mbc_master_init(MB_PORT_SERIAL_MASTER, &m_handle);
+    m_config = config;   
+    mb_communication_info_t commInfo = {};
+    commInfo.ser_opts.port  = m_config.uartPort;
+    commInfo.ser_opts.mode =  m_config.modbusMode;
+    commInfo.ser_opts.baudrate = m_config.baudRate;
+    commInfo.ser_opts.parity = MB_PARITY_NONE;
+    commInfo.ser_opts.uid = 0;
+    
+    esp_err_t error = mbc_master_create_serial(&commInfo, &m_context);
     if (error != ESP_OK) {
-        ESP_LOGE(TAG, "An error occured while trying to initialise the port %s", esp_err_to_name(error));
+        ESP_LOGE(TAG, "An error occurred while trying to create the serial communication: %s",
+                 esp_err_to_name(error));
         if (error == ESP_ERR_NOT_SUPPORTED) {
             return ModbusError::PORT_NOT_SUPPORTED;
         } else if (error == ESP_ERR_INVALID_STATE) {
@@ -46,19 +57,6 @@ ModbusError DynamicModbusMaster::initialise(ModbusConfig config) {
         } else {
             return ModbusError::FAILURE;
         }
-    }
-    
-    mb_communication_info_t commInfo = defaultCommInfo();
-    
-    commInfo.port = m_config.uartPort;
-    commInfo.baudrate = m_config.baudRate;
-    commInfo.mode = m_config.modbusMode;
-    
-    error = mbc_master_setup(&commInfo);
-    if (error != ESP_OK) {
-        ESP_LOGE(TAG, "An error occurred while trying to set up the communication parameters: %s",
-                 esp_err_to_name(error));
-        return ModbusError::INVALID_ARG;
     }
     
     error = uart_set_pin(m_config.uartPort, m_config.txdPin, m_config.rxdPin, m_config.rtsPin, UART_PIN_NO_CHANGE);
@@ -71,7 +69,7 @@ ModbusError DynamicModbusMaster::initialise(ModbusConfig config) {
 }
 
 ModbusError DynamicModbusMaster::start() {
-    esp_err_t error = mbc_master_start();
+    esp_err_t error = mbc_master_start(m_context);
     if (error != ESP_OK) {
         ESP_LOGE(TAG, "An error occurred while starting the Modbus communication stack: %s", esp_err_to_name(error));
         return ModbusError::INVALID_ARG;
@@ -87,12 +85,16 @@ ModbusError DynamicModbusMaster::start() {
 }
 
 ModbusError DynamicModbusMaster::stop() {
-    esp_err_t error = mbc_master_destroy();
+    esp_err_t error = mbc_master_stop(m_context);
     if (error != ESP_OK) {
-        ESP_LOGE(TAG, "An error occured while trying to stop and destroy the modbus communication stack %s",
+        ESP_LOGE(TAG, "An error occured while trying to stop the modbus communication stack %s",
                  esp_err_to_name(error));
         return ModbusError::INVALID_STATE;
     }
     return ModbusError::OK;
+}
+
+void* DynamicModbusMaster::getContext() const {
+    return m_context;
 }
 }

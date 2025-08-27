@@ -34,6 +34,11 @@ namespace dynamic_modbus_master {
 class DynamicModbusMaster {
 public:
     /**
+     * @brief Destroys the previously with `initialise` allocated Modbus Master controller.
+     */
+    ~DynamicModbusMaster();
+
+    /**
      * @brief Initialize the Modbus Master controller and set up the communication parameters.
      *
      * @details This function initializes the Modbus Master controller and sets up the communication
@@ -73,7 +78,7 @@ public:
     /**
      * @brief Stop the Modbus communication stack.
      *
-     * @details This function stops the Modbus communication stack by calling the `mbc_master_destroy()` function.
+     * @details This function stops the Modbus communication stack by calling the `mbc_master_stop()` function.
      * If an error occurs during the stop process, an error log is generated using the `ESP_LOGE` macro with the tag
      * "DynamicModbusMaster" and the error name is printed using the `esp_err_to_name()` function. The function returns
      * `ModbusError::INVALID_STATE` to indicate an invalid state error. If the stop process is successful, the
@@ -88,9 +93,18 @@ public:
      */
     ModbusError stop();
     
+    /**
+     * @brief Get the context object to the Modbus communication stack. Allows to create multiple instances of masters.
+     * 
+     * @note Creating multiple instances was a feature introduced in esp modbus version 2.0, previous version allowed only for one global master to exist even with different protocols.
+     * 
+     * @return Non owning pointer to the context handle, that allows to refer to the initally created Modbus communication stack.
+     */
+    void* getContext() const;
+
 private:
     ModbusConfig m_config;
-    void* m_handle;
+    void* m_context;
 };
 }
 
