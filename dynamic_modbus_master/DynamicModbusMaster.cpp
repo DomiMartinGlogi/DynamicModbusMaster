@@ -69,7 +69,20 @@ ModbusError DynamicModbusMaster::initialise(ModbusConfig config) {
 }
 
 ModbusError DynamicModbusMaster::start() {
-    esp_err_t error = mbc_master_start(m_context);
+    // MBC Serial Master Start method checks that the parameter descriptor size is atleast 1 even if the table is
+    // never used. Therefore atleast one dummy entry needs to be added. See
+    // https://github.com/espressif/esp-modbus/issues/123 for more information.
+    mb_parameter_descriptor_t dummy_entry{};
+    dummy_entry.param_key = "DUMMY";
+    dummy_entry.mb_size = 1;
+
+    esp_err_t error = mbc_master_set_descriptor(m_context, &dummy_entry, 1);
+    if (error != ESP_OK) {
+        ESP_LOGE(TAG, "An error occurred while registering dummy device parameter: %s", esp_err_to_name(error));
+        return ModbusError::INVALID_ARG;
+    }
+
+    error = mbc_master_start(m_context);
     if (error != ESP_OK) {
         ESP_LOGE(TAG, "An error occurred while starting the Modbus communication stack: %s", esp_err_to_name(error));
         return ModbusError::INVALID_ARG;
